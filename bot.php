@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 				{
 					$result_text = 'ไม่พบข้อมูล'; 
 				} 
-				$response_format_text = ['contentType'=>1,"toType"=>1,"text"=>$result_text]; 
+				
 
 				// Build message to reply back
 				$messages = [
@@ -73,29 +73,29 @@ if (!is_null($events['events'])) {
 					$messages = [
 					'type' => 'template',
 					'altText' => 'this is a buttons template',
-					'template' => {
+					'template' => [  //{
 						'type' => 'buttons',
 						'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
 						'title' => 'Menu',
 						'text' => 'Please select',
 						'actions' => [
-						{
+						[
 							'type' => 'postback',
 							'label' => 'Buy',
 							'data' => 'action=buy&itemid=123'
-						},
-						{
+						],
+						[
 							'type' => 'postback',
 							'label' => 'Add to cart',
 							'data' => 'action=add&itemid=123'
-						},
-						{
+						],
+						[
 							'type' => 'uri',
 							'label' => 'View detail',
 							'uri' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg'
-						}
 						]
-					}
+						]
+					] //}
 
 					];
 				} catch (Exception $e) {
