@@ -133,5 +133,5 @@ if (!is_null($events['events'])) {
 echo "OK";
 
 
-//  https://warm-brushlands-72856.herokuapp.com/bot.php     ** for test link
+//  https://warm-brushlands-72856.herokuapp.com/bot.php     ** for test link web
 ?>
