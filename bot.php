@@ -8,9 +8,9 @@ $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
-	foreach ($events['events'] as $event) {
-		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+foreach ($events['events'] as $event) {
+		// Reply only when message sent is in 'text' format	
+	if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
@@ -18,8 +18,8 @@ if (!is_null($events['events'])) {
 
 
 			/**  Start condition BOT to response*/
-
-			$text_ex = explode(':', $text);   //explode text by ':'
+			
+	$text_ex = explode(':', $text);   //explode text by ':'
 
 			//******  wiki:  *******
 			if($text_ex[0] == "wiki"){
