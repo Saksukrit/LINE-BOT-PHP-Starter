@@ -16,7 +16,12 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			$text_ex = explode(':', $text); 
+
+			/**  Start condition BOT to response*/
+
+			$text_ex = explode(':', $text);   //explode text by ':'
+
+			//******  wiki:  *******
 			if($text_ex[0] == "wiki"){
 
 				$ch1 = curl_init(); 
@@ -31,6 +36,7 @@ if (!is_null($events['events'])) {
 					$result_text = $val['extract']; 
 				} 
 
+				//if empty result by above
 				if(empty($result_text)){
 
 					$ch1 = curl_init(); 
@@ -60,6 +66,39 @@ if (!is_null($events['events'])) {
 				'text' => $result_text
 				];
 
+
+			}else if($text == "template"){
+
+				$messages = [
+				"type": "template",
+				"altText": "this is a buttons template",
+				"template": {
+					"type": "buttons",
+					"thumbnailImageUrl": "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",
+					"title": "Menu",
+					"text": "Please select",
+					"actions": [
+					{
+						"type": "postback",
+						"label": "Buy",
+						"data": "action=buy&itemid=123"
+					},
+					{
+						"type": "postback",
+						"label": "Add to cart",
+						"data": "action=add&itemid=123"
+					},
+					{
+						"type": "uri",
+						"label": "View detail",
+						"uri": "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg"
+					}
+					]
+				}
+
+				];
+
+			//******  other  *******
 			}else{
 				// Build message to reply back
 				$messages = [
@@ -92,3 +131,7 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK";
+
+
+//  https://warm-brushlands-72856.herokuapp.com/bot.php     ** for test link
+?>
