@@ -65,47 +65,50 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $result_text
 				];
-
+			}
 
 			//******  template  *******
-			}else if($text == "template"){
+			else if($text == "template"){
+				try {
+					$messages = [
+					'type' => 'template',
+					'altText' => 'this is a buttons template',
+					'template' => {
+						'type' => 'buttons',
+						'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",
+						'title' => "Menu",
+						'text' => "Please select",
+						'actions' => [
+						{
+							'type' => "postback",
+							'label' => "Buy",
+							'data' => "action=buy&itemid=123"
+						},
+						{
+							'type' => "postback",
+							'label' => "Add to cart",
+							'data' => "action=add&itemid=123"
+						},
+						{
+							'type' => "uri",
+							'label' => "View detail",
+							'uri' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg"
+						}
+						]
+					}
 
-				// $messages = [
-				// 'type'=> 'template',
-				// 'altText'=> 'this is a buttons template',
-				// 'template'=> {
-				// 	'type'=> 'buttons',
-				// 	'thumbnailImageUrl'=> "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",
-				// 	'title'=> "Menu",
-				// 	'text'=> "Please select",
-				// 	'actions'=> [
-				// 	{
-				// 		'type'=> "postback",
-				// 		'label'=> "Buy",
-				// 		'data'=> "action=buy&itemid=123"
-				// 	},
-				// 	{
-				// 		'type'=> "postback",
-				// 		'label'=> "Add to cart",
-				// 		'data'=> "action=add&itemid=123"
-				// 	},
-				// 	{
-				// 		'type'=> "uri",
-				// 		'label'=> "View detail",
-				// 		'uri'=> "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg"
-				// 	}
-				// 	]
-				// }
-
-				// ];
-
-				$messages = [
-				'type' => 'text',
-				'text' => $text
-				];
+					];
+				} catch (Exception $e) {
+					$messages = [
+					'type' => 'text',
+					'text' => $e->getMessage()
+					];
+				}
+			}
 
 			//******  other  *******
-			}else{
+			
+			else{
 				// Build message to reply back
 				$messages = [
 				'type' => 'text',
