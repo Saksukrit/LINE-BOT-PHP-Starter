@@ -2,16 +2,14 @@
 namespace BOT;
 
 // include('LINEBot.php');
+require_once('./LINEBot.php');
 
 use LINE;
-use LINE\LINEBot\Event\Parser\EventRequestParser;
-use LINE\LINEBot\HTTPClient;
-use LINE\LINEBot\MessageBuilder;
-use LINE\LINEBot\MessageBuilder\TextMessageBuilder;
-use LINE\LINEBot\Response;
-use LINE\LINEBot\SignatureValidator;
 
-// $testmsg = new TemplateMessageBuilder();
+
+
+
+// $testmsg = new TemplateMessageBuilder\TemplateMessageBuilder();
 
 // $test = new LINEBot\LINE();
 // $test->replyMessage();
@@ -92,18 +90,17 @@ if (!is_null($events['events'])) {
                     'label' => "Buy",
                     'data' => "action=buy&itemid=123"
                     ]
-                    // ,
-                    // [
-                    // 'type' => 'postback',
-                    // 'label' => "Add to cart",
-                    // 'data' => "action=add&itemid=123"
-                    // ]
+                    ,[
+                    'type' => 'postback',
+                    'label' => "Add to cart",
+                    'data' => "action=add&itemid=123"
+                    ]
                     ];
                     
                     $template = [];
                     $template[] = [
                     'type' => 'buttons',
-                    'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",
+                    'thumbnailImageUrl' => "",   //http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
                     'title' => "Menu",
                     'text' => "Please select",
                     'actions' => $actions
