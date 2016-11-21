@@ -75,12 +75,20 @@ if (!is_null($events['events'])) {
                 ];
             } //******  template  *******
             else if ($text == "template") {
-                $actions = array(
-                array('type' => 'postback','label' => "Buy",'data' => "action=buy&itemid=123"),
-                array('type' => 'postback','label' => "Add to cart",'data' => "action=add&itemid=123")
-                );
+                $actions[] = [
+                [
+                'type' => 'postback',
+                'label' => "Buy",
+                'data' => "action=buy&itemid=123"
+                ],
+                [
+                'type' => 'postback',
+                'label' => "Add to cart",
+                'data' => "action=add&itemid=123"
+                ]
+                ];
                 
-                $template = [
+                $template[] = [
                 'type' => 'buttons',
                 'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",
                 'title' => "Menu",
@@ -101,7 +109,7 @@ if (!is_null($events['events'])) {
                     'text' => $e->getMessage()
                     ];
                 }
-            }
+            } 
             
             //******  other  *******
             else {
