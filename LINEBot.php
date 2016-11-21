@@ -25,6 +25,7 @@ use LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 use LINE\LINEBot\Response;
 use LINE\LINEBot\SignatureValidator;
 
+
 /**
  * A client class of LINE Messaging API.
  *
@@ -172,3 +173,7 @@ class LINEBot
         return SignatureValidator::validateSignature($body, $this->channelSecret, $signature);
     }
 }
+
+/** work space*/
+
+echo "OK";
