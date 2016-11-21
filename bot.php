@@ -91,12 +91,13 @@ if (!is_null($events['events'])) {
                     'type' => 'postback',
                     'label' => "Buy",
                     'data' => "action=buy&itemid=123"
-                    ],
-                    [
-                    'type' => 'postback',
-                    'label' => "Add to cart",
-                    'data' => "action=add&itemid=123"
                     ]
+                    // ,
+                    // [
+                    // 'type' => 'postback',
+                    // 'label' => "Add to cart",
+                    // 'data' => "action=add&itemid=123"
+                    // ]
                     ];
                     
                     $template = [];
