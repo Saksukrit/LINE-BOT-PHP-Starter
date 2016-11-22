@@ -90,43 +90,43 @@ if (!is_null($events['events'])) {
             //******  template  *******
             else if ($text == "template") {
                 
-                $messages = [
-                'type' => 'template',
-                'altText' => 'this is a buttons template',
-                'template' => array(
-                array('type' => 'buttons',
-                'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
-                'title' => 'Menu',
-                'text' => 'Please select',
-                'actions' => array(
-                array(
-                'type' => 'postback',
-                'label' => 'Buy',
-                'data' => 'action=buy&itemid=123'
-                // ),
+                // $messages = [
+                // 'type' => 'template',
+                // 'altText' => 'this is a buttons template',
+                // 'template' => array(
+                // array('type' => 'buttons',
+                // 'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
+                // 'title' => 'Menu',
+                // 'text' => 'Please select',
+                // 'actions' => array(
                 // array(
                 // 'type' => 'postback',
-                // 'label' => 'Add to cart',
-                // 'data' => 'action=add&itemid=123'
-                // ),
-                // array(
-                // 'type' => 'uri',
-                // 'label' => 'View detail',
-                // 'uri' => 'http://example.com/page/123'
-                )
-                )
-                ))];
+                // 'label' => 'Buy',
+                // 'data' => 'action=buy&itemid=123'
+                // // ),
+                // // array(
+                // // 'type' => 'postback',
+                // // 'label' => 'Add to cart',
+                // // 'data' => 'action=add&itemid=123'
+                // // ),
+                // // array(
+                // // 'type' => 'uri',
+                // // 'label' => 'View detail',
+                // // 'uri' => 'http://example.com/page/123'
+                // )
+                // )
+                // ))];
                 
-                // $messages = [
-                // 'type' => 'text',
-                // 'text' => $text.' tem'
-                // ];
+                $messagess = [
+                'type' => 'text',
+                'text' => $text.' tem'
+                ];
                 
                 // LINEBotTiny
                 $client->replyMessage(
                 array(
                 'replyToken' => $event['replyToken'],
-                'messages' => $messages
+                'messages' => $messagess
                 // 'messages' => array(
                 // array('type' => 'text','text' => $event['message']['text'])
                 // )
@@ -172,11 +172,18 @@ if (!is_null($events['events'])) {
                 // }
                 
             }else if($text == "img"){
-                $messages = [
+                $messagess = [
                 'type' => 'image',
                 'originalContentUrl'=> 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
                 'previewImageUrl'=> 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg'
                 ];
+                
+                // LINEBotTiny
+                $client->replyMessage(
+                array(
+                'replyToken' => $event['replyToken'],
+                'messages' => $messagess
+                ));
             }
             
             //******  other  *******
