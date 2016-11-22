@@ -1,10 +1,10 @@
 <?php
-namespace BOT;
+// namespace BOT;
 
 // include('LINEBot.php');
 require_once('./LINEBot.php');
 
-use LINE;
+// use LINE;
 
 
 
@@ -13,6 +13,14 @@ use LINE;
 
 // $test = new LINEBot\LINE();
 // $test->replyMessage();
+
+require_once('./LINEBotTiny.php');
+
+$channelAccessToken = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkmKpKys/TTEvQO99XihXnZaPKVO/4VsQXLqs8LQZdmskXuwncFHyI8/GZjv91J9Q/YN/pmATJTvlp6YOxOBypA2QFg1r6OwdB04t89/1O/w1cDnyilFU=';
+$channelSecret = '98ca0db8ed81032c7d483cef30bcb190';
+
+$client = new LINEBotTiny($channelAccessToken, $channelSecret);
+echo $client->parseEvents();
 
 $access_token = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkmKpKys/TTEvQO99XihXnZaPKVO/4VsQXLqs8LQZdmskXuwncFHyI8/GZjv91J9Q/YN/pmATJTvlp6YOxOBypA2QFg1r6OwdB04t89/1O/w1cDnyilFU=';
 
@@ -79,7 +87,8 @@ if (!is_null($events['events'])) {
                 'type' => 'text',
                 'text' => $result_text
                 ];
-            } //******  template  *******
+            }
+            //******  template  *******
             else if ($text == "template") {
                 
                 try {
@@ -126,7 +135,7 @@ if (!is_null($events['events'])) {
                 // Build message to reply back
                 $messages = [
                 'type' => 'text',
-                'text' => $text
+                'text' => $client->parseEvents()
                 ];
             }
             

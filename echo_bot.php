@@ -22,32 +22,32 @@ $channelAccessToken = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkm
 $channelSecret = '98ca0db8ed81032c7d483cef30bcb190';
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-// echo $client->parseEvents(); 
-// foreach ($client->parseEvents() as $event) {
-//     switch ($event['type']) {
-//         case 'message':
-//             $message = $event['message'];
-//             switch ($message['type']) {
-//                 case 'text':
-//                     $client->replyMessage(
-//                     array(
-//                     'replyToken' => $event['replyToken'],
-//                     'messages' => array(
-//                     array('type' => 'text','text' => $message['text'])
-//                     )
-//                     )
-//                     );
-//                     break;
-//                 default:
-//                     error_log("Unsupporeted message type: " . $message['type']);
-//                     break;
-//         }
-//         break;
-//     default:
-//         error_log("Unsupporeted event type: " . $event['type']);
-//         break;
-// }
-// }
+echo $client->parseEvents();
+foreach ($client->parseEvents() as $event) {
+    switch ($event['type']) {
+        case 'message':
+            $message = $event['message'];
+            switch ($message['type']) {
+                case 'text':
+                    $client->replyMessage(
+                    array(
+                    'replyToken' => $event['replyToken'],
+                    'messages' => array(
+                    array('type' => 'text','text' => $message['text'])
+                    )
+                    )
+                    );
+                    break;
+                default:
+                    error_log("Unsupporeted message type: " . $message['type']);
+                    break;
+        }
+        break;
+    default:
+        error_log("Unsupporeted event type: " . $event['type']);
+        break;
+}
+}
 
 
 echo "OK ?? ";
