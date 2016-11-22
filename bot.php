@@ -126,10 +126,10 @@ if (!is_null($events['events'])) {
                 $client->replyMessage(
                 array(
                 'replyToken' => $event['replyToken'],
-                'messages' => $messagess
-                // 'messages' => array(
-                // array('type' => 'text','text' => $event['message']['text'])
-                // )
+                // 'messages' => $messagess
+                'messages' => array(
+                array('type' => 'text','text' => $event['message']['text'])
+                )
                 )
                 );
                 
