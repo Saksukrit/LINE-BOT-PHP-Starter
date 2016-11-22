@@ -90,7 +90,7 @@ if (!is_null($events['events'])) {
             }
             //******  template  *******
             else if ($text == "template") {
-                $messages = [array(
+                $messages = [
                 'type' => 'template',
                 'altText' => 'this is a buttons template',
                 'template' => array(
@@ -115,7 +115,7 @@ if (!is_null($events['events'])) {
                 'uri' => 'http://example.com/page/123',
                 ),
                 ),
-                ))];
+                )];
                 
                 // try {
                 //     // $actions = [];
