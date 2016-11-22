@@ -92,8 +92,8 @@ if (!is_null($events['events'])) {
             else if ($text == "template") {
                 
                 try {
-                    $actions = [];
-                    $actions[] = [
+                    // $actions = [];
+                    $actions = [
                     [
                     'type' => 'postback',
                     'label' => "Buy",
@@ -106,21 +106,20 @@ if (!is_null($events['events'])) {
                     ]
                     ];
                     
-                    $template = [];
-                    $template[] = [
+                    // $template = [];
+                    $template = [
                     'type' => 'buttons',
-                    'thumbnailImageUrl' => "",   //http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
+                    'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",   //http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
                     'title' => "Menu",
                     'text' => "Please select",
-                    'actions' => $actions
+                    'actions' => [$actions]
                     ];
                     
                     
                     $messages = [
                     'type' => 'template',
                     'altText' => "this is a buttons template",
-                    'template' => $template
-                    
+                    'template' => [$template]
                     ];
                 } catch (Exception $e) {
                     $messages = [
@@ -135,7 +134,7 @@ if (!is_null($events['events'])) {
                 // Build message to reply back
                 $messages = [
                 'type' => 'text',
-                'text' => $client->parseEvents()
+                'text' => $text
                 ];
             }
             
