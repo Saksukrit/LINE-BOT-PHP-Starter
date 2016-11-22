@@ -93,33 +93,33 @@ if (!is_null($events['events'])) {
                 
                 try {
                     // $actions = [];
-                    $actions = [
-                    [
+                    $actions = array(
+                    array(
                     'type' => 'postback',
                     'label' => "Buy",
                     'data' => "action=buy&itemid=123"
-                    ]
-                    ,[
+                    )
+                    ,array(
                     'type' => 'postback',
                     'label' => "Add to cart",
                     'data' => "action=add&itemid=123"
-                    ]
-                    ];
+                    )
+                    );
                     
                     // $template = [];
-                    $template = [
+                    $template = array(
                     'type' => 'buttons',
                     'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",   //http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
                     'title' => "Menu",
                     'text' => "Please select",
-                    'actions' => [$actions],
-                    ];
+                    'actions' => $actions
+                    );
                     
                     
                     $messages = [
                     'type' => 'template',
                     'altText' => "this is a buttons template",
-                    'template' => [$template],
+                    'template' => $template
                     ];
                 } catch (Exception $e) {
                     $messages = [
