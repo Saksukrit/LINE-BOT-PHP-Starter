@@ -141,11 +141,11 @@ if (!is_null($events['events'])) {
                 array(
                 'type' => 'postback',
                 'label' => 'Buy',
-                'data' => 'action=buy&itemid=123')
+                'data' => 'buy')
                 ,array(
                 'type' => 'postback',
                 'label' => 'Add to cart',
-                'data' => 'action=add&itemid=123')
+                'data' => 'add to cart')
                 
                 )
                 )
