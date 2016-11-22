@@ -114,7 +114,18 @@ if (!is_null($events['events'])) {
                 'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
                 'title' => 'Menu',
                 'text' => 'Please select',
-                'actions' => $actions
+                'actions' => array(
+                array(
+                'type' => 'postback',
+                'label' => 'Buy',
+                'data' => 'action=buy&itemid=123'
+                )
+                ,array(
+                'type' => 'postback',
+                'label' => 'Add to cart',
+                'data' => 'action=add&itemid=123'
+                )
+                )
                 ];
                 
                 
