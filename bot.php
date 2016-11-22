@@ -175,7 +175,7 @@ if (!is_null($events['events'])) {
                 $messages = [
                 'type' => 'image',
                 'originalContentUrl'=> 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
-                'previewImageUrl'=> 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg'
+                'previewImageUrl'=> 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg'
                 ];
             }
             
