@@ -114,7 +114,7 @@ if (!is_null($events['events'])) {
                 'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
                 'title' => 'Menu',
                 'text' => 'Please select',
-                'actions' => [$actions]
+                'actions' => $actions
                 ];
                 
                 
