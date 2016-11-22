@@ -69,17 +69,17 @@ class LINEBotTiny
 
         $entityBody = file_get_contents('php://input');
 
-        if (strlen($entityBody) === 0) {
-            http_response_code(400);
-            error_log("Missing request body");
-            exit();
-        }
+        // if (strlen($entityBody) === 0) {
+        //     http_response_code(400);
+        //     error_log("Missing request body");
+        //     exit();
+        // }
 
-        if (!hash_equals($this->sign($entityBody), $_SERVER['HTTP_X_LINE_SIGNATURE'])) {
-            http_response_code(400);
-            error_log("Invalid signature value");
-            exit();
-        }
+        // if (!hash_equals($this->sign($entityBody), $_SERVER['HTTP_X_LINE_SIGNATURE'])) {
+        //     http_response_code(400);
+        //     error_log("Invalid signature value");
+        //     exit();
+        // }
 
         $data = json_decode($entityBody, true);
         if (!isset($data['events'])) {
