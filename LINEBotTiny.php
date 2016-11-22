@@ -61,11 +61,11 @@ class LINEBotTiny
 
     public function parseEvents()
     {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            http_response_code(405);
-            error_log("Method not allowed");
-            exit();
-        }
+        // if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        //     http_response_code(405);
+        //     error_log("Method not allowed");
+        //     exit();
+        // }
 
         $entityBody = file_get_contents('php://input');
 
@@ -82,11 +82,11 @@ class LINEBotTiny
         // }
 
         $data = json_decode($entityBody, true);
-        if (!isset($data['events'])) {
-            http_response_code(400);
-            error_log("Invalid request body: missing events property");
-            exit();
-        }
+        // if (!isset($data['events'])) {
+        //     http_response_code(400);
+        //     error_log("Invalid request body: missing events property");
+        //     exit();
+        // }
         return $data['events'];
     }
 
