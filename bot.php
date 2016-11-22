@@ -91,9 +91,36 @@ if (!is_null($events['events'])) {
             else if ($text == "template") {
                 
                 $messages = [
-                'type' => 'text',
-                'text' => $text.' tem'
-                ];
+                'type' => 'template',
+                'altText' => 'this is a buttons template',
+                'template' => array(
+                array('type' => 'buttons',
+                'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
+                'title' => 'Menu',
+                'text' => 'Please select',
+                'actions' =>array(
+                0 =>array(
+                'type' => 'postback',
+                'label' => 'Buy',
+                'data' => 'action=buy&itemid=123',
+                ),
+                1 =>array(
+                'type' => 'postback',
+                'label' => 'Add to cart',
+                'data' => 'action=add&itemid=123',
+                ),
+                2 =>array(
+                'type' => 'uri',
+                'label' => 'View detail',
+                'uri' => 'http://example.com/page/123',
+                ),
+                ),
+                ))];
+                
+                // $messages = [
+                // 'type' => 'text',
+                // 'text' => $text.' tem'
+                // ];
                 
                 // LINEBotTiny
                 $client->replyMessage(
@@ -106,34 +133,6 @@ if (!is_null($events['events'])) {
                 )
                 );
                 
-                
-                
-                // $messages = [
-                // 'type' => 'template',
-                // 'altText' => 'this is a buttons template',
-                // 'template' => array(
-                // 'type' => 'buttons',
-                // 'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
-                // 'title' => 'Menu',
-                // 'text' => 'Please select',
-                // 'actions' =>array(
-                // 0 =>array(
-                // 'type' => 'postback',
-                // 'label' => 'Buy',
-                // 'data' => 'action=buy&itemid=123',
-                // ),
-                // 1 =>array(
-                // 'type' => 'postback',
-                // 'label' => 'Add to cart',
-                // 'data' => 'action=add&itemid=123',
-                // ),
-                // 2 =>array(
-                // 'type' => 'uri',
-                // 'label' => 'View detail',
-                // 'uri' => 'http://example.com/page/123',
-                // ),
-                // ),
-                // )];
                 
                 // try {
                 //     // $actions = [];
