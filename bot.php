@@ -133,10 +133,11 @@ if (!is_null($events['events'])) {
                 'template' => array(
                 
                 'type' => 'buttons',
-                'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
+                // 'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
                 'title' => 'Menu',
                 'text' => 'Please select',
                 'actions' => array(
+                
                 array(
                 'type' => 'postback',
                 'label' => 'Buy',
@@ -145,7 +146,9 @@ if (!is_null($events['events'])) {
                 'type' => 'postback',
                 'label' => 'Add to cart',
                 'data' => 'action=add&itemid=123')
-                ))
+                
+                )
+                )
                 ];
                 
                 // LINEBotTiny
