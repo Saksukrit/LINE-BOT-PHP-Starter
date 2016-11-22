@@ -95,45 +95,13 @@ if (!is_null($events['events'])) {
                 // 'text' => $text.' tem'
                 // ];
                 
-                
-                $actions = array(
-                array(
-                'type' => 'postback',
-                'label' => 'Buy',
-                'data' => 'action=buy&itemid=123'
-                )
-                ,array(
-                'type' => 'postback',
-                'label' => 'Add to cart',
-                'data' => 'action=add&itemid=123'
-                )
-                );
-                
-                $template = [
-                'type' => 'buttons',
-                'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
-                'title' => 'Menu',
-                'text' => 'Please select',
-                'actions' => array(
-                array(
-                'type' => 'postback',
-                'label' => 'Buy',
-                'data' => 'action=buy&itemid=123')
-                ,array(
-                'type' => 'postback',
-                'label' => 'Add to cart',
-                'data' => 'action=add&itemid=123')
-                )
-                ];
-                
-                
                 $messagess = [
                 'type' => 'template',
                 'altText' => 'this is a buttons template',
                 'template' => array(
                 
                 'type' => 'buttons',
-                // 'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
+                'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
                 'title' => 'Menu',
                 'text' => 'Please select',
                 'actions' => array(
@@ -141,11 +109,13 @@ if (!is_null($events['events'])) {
                 array(
                 'type' => 'postback',
                 'label' => 'Buy',
-                'data' => 'buy')
+                'data' => 'buy',
+                'text' => 'buy')
                 ,array(
                 'type' => 'postback',
                 'label' => 'Add to cart',
-                'data' => 'add to cart')
+                'data' => 'add to cart',
+                'text' => 'add')
                 
                 )
                 )
@@ -156,9 +126,6 @@ if (!is_null($events['events'])) {
                 array(
                 'replyToken' => $event['replyToken'],
                 'messages' => [$messagess]
-                // 'messages' => array(
-                // array('type' => 'text','text' => $event['message']['text'])
-                // )
                 )
                 );
                 
