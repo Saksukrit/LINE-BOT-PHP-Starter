@@ -102,17 +102,17 @@ if (!is_null($events['events'])) {
                 array(
                 'type' => 'postback',
                 'label' => 'Buy',
-                'data' => 'action=buy&itemid=123',
-                ),
-                array(
-                'type' => 'postback',
-                'label' => 'Add to cart',
-                'data' => 'action=add&itemid=123',
-                ),
-                array(
-                'type' => 'uri',
-                'label' => 'View detail',
-                'uri' => 'http://example.com/page/123',
+                'data' => 'action=buy&itemid=123'
+                // ),
+                // array(
+                // 'type' => 'postback',
+                // 'label' => 'Add to cart',
+                // 'data' => 'action=add&itemid=123'
+                // ),
+                // array(
+                // 'type' => 'uri',
+                // 'label' => 'View detail',
+                // 'uri' => 'http://example.com/page/123'
                 )
                 )
                 ))];
