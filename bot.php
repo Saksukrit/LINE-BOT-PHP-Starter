@@ -20,7 +20,6 @@ $channelAccessToken = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkm
 $channelSecret = '98ca0db8ed81032c7d483cef30bcb190';
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-echo $client->parseEvents();
 
 $access_token = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkmKpKys/TTEvQO99XihXnZaPKVO/4VsQXLqs8LQZdmskXuwncFHyI8/GZjv91J9Q/YN/pmATJTvlp6YOxOBypA2QFg1r6OwdB04t89/1O/w1cDnyilFU=';
 
@@ -90,69 +89,82 @@ if (!is_null($events['events'])) {
             }
             //******  template  *******
             else if ($text == "template") {
-                $messages = [
-                'type' => 'template',
-                'altText' => 'this is a buttons template',
-                'template' => array(
-                'type' => 'buttons',
-                'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
-                'title' => 'Menu',
-                'text' => 'Please select',
-                'actions' =>array(
-                0 =>array(
-                'type' => 'postback',
-                'label' => 'Buy',
-                'data' => 'action=buy&itemid=123',
-                ),
-                1 =>array(
-                'type' => 'postback',
-                'label' => 'Add to cart',
-                'data' => 'action=add&itemid=123',
-                ),
-                2 =>array(
-                'type' => 'uri',
-                'label' => 'View detail',
-                'uri' => 'http://example.com/page/123',
-                ),
-                ),
-                )];
                 
-                // try {
-                //     // $actions = [];
-                //     $actions = array(
-                //     array(
-                //     'type' => 'postback',
-                //     'label' => "Buy",
-                //     'data' => "action=buy&itemid=123"
-                //     )
-                //     ,array(
-                //     'type' => 'postback',
-                //     'label' => "Add to cart",
-                //     'data' => "action=add&itemid=123"
-                //     )
-                //     );
-                
-                //     // $template = [];
-                //     $template = array(
-                //     'type' => 'buttons',
-                //     'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",   //http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
-                //     'title' => "Menu",
-                //     'text' => "Please select",
-                //     'actions' => $actions
-                //     );
+                $client->replyMessage(
+                    array(
+                    'replyToken' => $event['replyToken'],
+                    'messages' => array(
+                    array('type' => 'text','text' => $event['message']['text'])
+                    )
+                    )
+                    );
+
                 
                 
-                //     $messages = [
-                //     'type' => 'template',
-                //     'altText' => "this is a buttons template",
-                //     'template' => $template
-                //     ];
-                // } catch (Exception $e) {
-                //     $messages = [
-                //     'type' => 'text',
-                //     'text' => $e->getMessage()
-                //     ];
-                // }
+                    // $messages = [
+                    // 'type' => 'template',
+                    // 'altText' => 'this is a buttons template',
+                    // 'template' => array(
+                    // 'type' => 'buttons',
+                    // 'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
+                    // 'title' => 'Menu',
+                    // 'text' => 'Please select',
+                    // 'actions' =>array(
+                    // 0 =>array(
+                    // 'type' => 'postback',
+                    // 'label' => 'Buy',
+                    // 'data' => 'action=buy&itemid=123',
+                    // ),
+                    // 1 =>array(
+                    // 'type' => 'postback',
+                    // 'label' => 'Add to cart',
+                    // 'data' => 'action=add&itemid=123',
+                    // ),
+                    // 2 =>array(
+                    // 'type' => 'uri',
+                    // 'label' => 'View detail',
+                    // 'uri' => 'http://example.com/page/123',
+                    // ),
+                    // ),
+                    // )];
+                    
+                    // try {
+                    //     // $actions = [];
+                    //     $actions = array(
+                    //     array(
+                    //     'type' => 'postback',
+                    //     'label' => "Buy",
+                    //     'data' => "action=buy&itemid=123"
+                    //     )
+                    //     ,array(
+                    //     'type' => 'postback',
+                    //     'label' => "Add to cart",
+                    //     'data' => "action=add&itemid=123"
+                    //     )
+                    //     );
+                    
+                    //     // $template = [];
+                    //     $template = array(
+                    //     'type' => 'buttons',
+                    //     'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",   //http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
+                    //     'title' => "Menu",
+                    //     'text' => "Please select",
+                    //     'actions' => $actions
+                    //     );
+                    
+                    
+                    //     $messages = [
+                    //     'type' => 'template',
+                    //     'altText' => "this is a buttons template",
+                    //     'template' => $template
+                    //     ];
+                    // } catch (Exception $e) {
+                    //     $messages = [
+                    //     'type' => 'text',
+                    //     'text' => $e->getMessage()
+                    //     ];
+                    // }
+                
             }
             
             //******  other  *******
