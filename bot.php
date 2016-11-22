@@ -88,7 +88,7 @@ if (!is_null($events['events'])) {
                 ];
             }
             //******  template  buttons *******
-            else if ($text == "template") {
+            else if ($text == "buttons") {
                 
                 // $messagess = [
                 // 'type' => 'text',
@@ -117,6 +117,37 @@ if (!is_null($events['events'])) {
                 'data' => 'add to cart',
                 'text' => 'add')
                 
+                )
+                )
+                ];
+                
+                // LINEBotTiny
+                $client->replyMessage(
+                array(
+                'replyToken' => $event['replyToken'],
+                'messages' => [$messagess]
+                )
+                );
+                
+                
+            }else if($text == "confirm"){
+                $messagess = [
+                "type"=> "template",
+                "altText"=> "this is a confirm template",
+                "template"=> array(
+                "type"=> "confirm",
+                "text"=> "Are you sure?",
+                "actions"=> array(
+                array(
+                "type"=> "message",
+                "label"=> "Yes",
+                "text"=> "yes"
+                ),
+                array(
+                "type"=> "message",
+                "label"=> "No",
+                "text"=> "no"
+                )
                 )
                 )
                 ];
