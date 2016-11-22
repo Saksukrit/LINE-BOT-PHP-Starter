@@ -87,39 +87,41 @@ if (!is_null($events['events'])) {
                 'text' => $result_text
                 ];
             }
-            //******  template  *******
+            //******  template  buttons *******
             else if ($text == "template") {
                 
-                // $messages = [
-                // 'type' => 'template',
-                // 'altText' => 'this is a buttons template',
-                // 'template' => array(
-                // array('type' => 'buttons',
-                // 'thumbnailImageUrl' => 'http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg',
-                // 'title' => 'Menu',
-                // 'text' => 'Please select',
-                // 'actions' => array(
-                // array(
-                // 'type' => 'postback',
-                // 'label' => 'Buy',
-                // 'data' => 'action=buy&itemid=123'
-                // // ),
-                // // array(
-                // // 'type' => 'postback',
-                // // 'label' => 'Add to cart',
-                // // 'data' => 'action=add&itemid=123'
-                // // ),
-                // // array(
-                // // 'type' => 'uri',
-                // // 'label' => 'View detail',
-                // // 'uri' => 'http://example.com/page/123'
-                // )
-                // )
-                // ))];
+                // $messagess = [
+                // 'type' => 'text',
+                // 'text' => $text.' tem'
+                // ];
+                
+                
+                $actions = [
+                array(
+                'type' => 'postback',
+                'label' => 'Buy',
+                'data' => 'action=buy&itemid=123'
+                )
+                ,array(
+                'type' => 'postback',
+                'label' => 'Add to cart',
+                'data' => 'action=add&itemid=123'
+                )
+                ];
+                
+                $template = [
+                'type' => 'buttons',
+                'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
+                'title' => 'Menu',
+                'text' => 'Please select',
+                'actions' => [$actions]
+                ];
+                
                 
                 $messagess = [
-                'type' => 'text',
-                'text' => $text.' tem'
+                'type' => 'template',
+                'altText' => 'this is a buttons template',
+                'template' => [$template]
                 ];
                 
                 // LINEBotTiny
@@ -132,44 +134,6 @@ if (!is_null($events['events'])) {
                 // )
                 )
                 );
-                
-                
-                // try {
-                //     // $actions = [];
-                //     $actions = array(
-                //     array(
-                //     'type' => 'postback',
-                //     'label' => "Buy",
-                //     'data' => "action=buy&itemid=123"
-                //     )
-                //     ,array(
-                //     'type' => 'postback',
-                //     'label' => "Add to cart",
-                //     'data' => "action=add&itemid=123"
-                //     )
-                //     );
-                
-                //     // $template = [];
-                //     $template = array(
-                //     'type' => 'buttons',
-                //     'thumbnailImageUrl' => "http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg",   //http://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
-                //     'title' => "Menu",
-                //     'text' => "Please select",
-                //     'actions' => $actions
-                //     );
-                
-                
-                //     $messages = [
-                //     'type' => 'template',
-                //     'altText' => "this is a buttons template",
-                //     'template' => $template
-                //     ];
-                // } catch (Exception $e) {
-                //     $messages = [
-                //     'type' => 'text',
-                //     'text' => $e->getMessage()
-                //     ];
-                // }
                 
             }else if($text == "img"){
                 $messagess = [
