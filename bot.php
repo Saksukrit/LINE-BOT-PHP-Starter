@@ -96,7 +96,7 @@ if (!is_null($events['events'])) {
                 // ];
                 
                 
-                $actions = [
+                $actions = array(
                 array(
                 'type' => 'postback',
                 'label' => 'Buy',
@@ -107,7 +107,7 @@ if (!is_null($events['events'])) {
                 'label' => 'Add to cart',
                 'data' => 'action=add&itemid=123'
                 )
-                ];
+                );
                 
                 $template = [
                 'type' => 'buttons',
