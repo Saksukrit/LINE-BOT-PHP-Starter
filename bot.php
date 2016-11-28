@@ -95,21 +95,21 @@ if (!is_null($events['events'])) {
     'template' => array(
 
           'type' => 'buttons',
-          'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg',
-          'title' => 'Menu',
+          'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/7/74/Tarte_au_fromage_blanc.png',
+          'title' => 'Do you like it?',
           'text' => 'Please select',
           'actions' => array(
 
                 array(
                       'type' => 'postback',
-                      'label' => 'Buy',
-                      'data' => 'buy',
-                      'text' => 'buy')
+                      'label' => 'Yes ,Now I want.',
+                      'data' => 'yes',
+                      'text' => 'yes')
                 ,array(
                       'type' => 'postback',
-                      'label' => 'Add to cart',
-                      'data' => 'add to cart',
-                      'text' => 'add')
+                      'label' => 'No ,I not like.',
+                      'data' => 'no',
+                      'text' => 'no')
 
                 )
           )
