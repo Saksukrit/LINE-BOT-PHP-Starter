@@ -164,7 +164,7 @@ if (!is_null($events['events'])) {
           'type' => 'carousel',
           'columns' => array(
                 array(
-                      'thumbnailImageUrl' => 'http://www.womansugar.com/images/picture2013/fruittart.jpg',
+                      'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/5/56/Chocolate_cupcakes.jpg',
                       'title' => 'Cup Cake',
                       'text' => 'Please select',
                       'actions' => array(
@@ -183,8 +183,8 @@ if (!is_null($events['events'])) {
                             )
                       )
                 ,array(
-                      'thumbnailImageUrl' => 'http://board.postjung.com/data/821/821963-img-1414947208-11.jpg',
-                      'title' => 'Toast',
+                      'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Dazzling%27s_honey_toast%2C_Taipei%2C_Taiwan_%288343904503%29.jpg/640px-Dazzling%27s_honey_toast%2C_Taipei%2C_Taiwan_%288343904503%29.jpg?uselang=th',
+                      'title' => 'Honey Toast',
                       'text' => 'Please select',
                       'actions' => array(
 
