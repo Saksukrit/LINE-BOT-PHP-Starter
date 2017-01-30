@@ -16,7 +16,7 @@ require_once('./LINEBot.php');
 
 require_once('./LINEBotTiny.php');
 
-$command = 'non';
+$command = "non";
 
 $channelAccessToken = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkmKpKys/TTEvQO99XihXnZaPKVO/4VsQXLqs8LQZdmskXuwncFHyI8/GZjv91J9Q/YN/pmATJTvlp6YOxOBypA2QFg1r6OwdB04t89/1O/w1cDnyilFU=';
 $channelSecret = '98ca0db8ed81032c7d483cef30bcb190';
@@ -109,7 +109,7 @@ if (!is_null($events['events'])) {
               'type' => 'text',
               'text' => 'โอเค'];
               
-              $command = 'continue';
+              $command = "continue";
             }
 
 
@@ -472,7 +472,7 @@ if (!is_null($events['events'])) {
 
             echo $result . "\r\n";
 
-            if($command == 'continue'){
+            if($command == "continue"){
               $messages = [
               'type' => 'text',
               'text' => 'ถามต่อเลย'
@@ -498,10 +498,10 @@ if (!is_null($events['events'])) {
 
               echo $result . "\r\n";
 
-              $command = 'non';
+              $command = "non";
             }
 
-            
+
 
           }
         }
