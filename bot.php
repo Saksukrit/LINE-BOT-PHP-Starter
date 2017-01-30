@@ -481,7 +481,7 @@ if (!is_null($events['events'])) {
               $command = "non";
             }
 
-            $url = 'https://api.line.me/v2/bot/message/reply';
+            $url = 'POST https://api.line.me/v2/bot/message/push';
             $data = [
             'replyToken' => $replyToken,
             'messages' => [$messages],
