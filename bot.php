@@ -155,7 +155,7 @@ if (!is_null($events['events'])) {
                 'type' => 'carousel',
                 'columns' => array(
                   array(
-                    'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_300577481.jpg',
+                  //   'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_300577481.jpg',
                     'title' => 'ฟรุตสลัด 1 ถ้วย',
                     'text' => ' 180 กิโลแคลอรี่',
                     'actions' => array(
@@ -169,7 +169,7 @@ if (!is_null($events['events'])) {
                       )
                     )
                   ,array(
-                    'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/12342.jpg',
+                  //   'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/12342.jpg',
                     'title' => 'ยำปลากระป๋อง 1 ถ้วย',
                     'text' => ' 55 กิโลแคลอรี่',
                     'actions' => array(
@@ -183,7 +183,7 @@ if (!is_null($events['events'])) {
                       )
                     )
                   ,array(
-                    'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_112369409.jpg',
+                  //   'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_112369409.jpg',
                     'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
                     'text' => ' 80 กิโลแคลอรี่',
                     'actions' => array(
