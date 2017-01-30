@@ -155,40 +155,44 @@ if (!is_null($events['events'])) {
                 'type' => 'carousel',
                 'columns' => array(
                   array(
-                    'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/5/56/Chocolate_cupcakes.jpg',
-                    'title' => 'Cup Cake',
-                    'text' => 'Please select',
+                    'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_300577481.jpg',
+                    'title' => 'ฟรุตสลัด 1 ถ้วย',
+                    'text' => ' 180 กิโลแคลอรี่',
                     'actions' => array(
 
                       array(
                         'type' => 'postback',
-                        'label' => 'Buy',
-                        'data' => 'buy',
-                        'text' => 'buy')
-                      ,array(
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+                      
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/12342.jpg',
+                    'title' => 'ยำปลากระป๋อง 1 ถ้วย',
+                    'text' => ' 55 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
                         'type' => 'postback',
-                        'label' => 'Add to cart',
-                        'data' => 'add to cart',
-                        'text' => 'add')
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
 
                       )
                     )
                   ,array(
-                    'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Dazzling%27s_honey_toast%2C_Taipei%2C_Taiwan_%288343904503%29.jpg/640px-Dazzling%27s_honey_toast%2C_Taipei%2C_Taiwan_%288343904503%29.jpg?uselang=th',
-                    'title' => 'Honey Toast',
-                    'text' => 'Please select',
+                    'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_112369409.jpg',
+                    'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
+                    'text' => ' 80 กิโลแคลอรี่',
                     'actions' => array(
 
                       array(
                         'type' => 'postback',
-                        'label' => 'Buy',
-                        'data' => 'buy',
-                        'text' => 'buy')
-                      ,array(
-                        'type' => 'postback',
-                        'label' => 'Add to cart',
-                        'data' => 'add to cart',
-                        'text' => 'add')
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
 
                       )
                     )
@@ -204,9 +208,11 @@ if (!is_null($events['events'])) {
                   'messages' => [$messagess]
                   )
                 );
-
               
             }
+
+
+            // ออกกำลังกาย
 
 
 
