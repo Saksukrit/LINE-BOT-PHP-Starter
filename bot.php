@@ -42,9 +42,20 @@ if (!is_null($events['events'])) {
             /**  Start condition BOT to response*/
 
             $text_ex = explode(':', $text);   //explode text by ':'
+
+
+            if($text == "สวัสดี"){
+
+            $messages = [
+            'type' => 'text',
+            'text' => 'สวัสดี Saksukrit
+            ขอต้อนรับสู่ Cal.MBot ^^'
+            ];
+
+            }
             
             //******  wiki:  *******
-            if ($text_ex[0] == "wiki") {
+          else if ($text_ex[0] == "wiki") {
 
                 $ch1 = curl_init();
                 curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
