@@ -157,7 +157,6 @@ if (!is_null($events['events'])) {
                 )
               ];
 
-                // LINEBotTiny
               $client->replyMessage(
                 array(
                   'replyToken' => $event['replyToken'],
@@ -194,35 +193,27 @@ if (!is_null($events['events'])) {
               และมีค่า TDEE เท่ากับ 2234 กิโลแคลอรี่'];
             }
 
+            //ยืนยันข้อมูล
+            else if($text == "ยืนยันข้อมูล"){
 
-
-
-            else if($text == "อยากรู้ แคลอรี่ของ ข้าวมันไก่"){
-
-             
               $messagess = [
-              'type' => 'template',
-              'altText' => 'ข้าวมันไก่',
-              'template' => array(
-
-                'type' => 'buttons',
-                'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fchicken-rice.jpg?alt=media&token=44c90fe8-8f2b-43fb-ad4b-defac632cde1',
-                'title' => 'ข้าวมันไก่',
-                'text' => 'ให้พลังงานเท่ากับ 585 กิโลแคลอรี่',
-            //     'actions' => array(
-
-            //       array(
-            //         'type' => 'postback',
-            //         'label' => 'Yes ,Now I want.',
-            //         'data' => 'yes',
-            //         'text' => 'yes')
-            //       ,array(
-            //         'type' => 'postback',
-            //         'label' => 'No ,I not like.',
-            //         'data' => 'no',
-            //         'text' => 'no')
-
-            //       )
+              "type"=> "template",
+              "altText"=> "ยืนยันข้อมูลถูกต้อง ?",
+              "template"=> array(
+                "type"=> "confirm",
+                "text"=> "ยืนยันข้อมูลถูกต้อง ?",
+                "actions"=> array(
+                  array(
+                    "type"=> "message",
+                    "label"=> "ตกลง",
+                    "text"=> "ตกลง"
+                    ),
+                  array(
+                    "type"=> "message",
+                    "label"=> "ยกเลิก",
+                    "text"=> "ยกเลิก"
+                    )
+                  )
                 )
               ];
 
@@ -233,8 +224,119 @@ if (!is_null($events['events'])) {
                   'messages' => [$messagess]
                   )
                 );
+              
+            }
+
+
+            //confirm
+            else if($text == "ตกลง"){
+
+              $messages = [
+              'type' => 'text',
+              'text' => 'บันทึกข้อมูลเรียบร้อย'];
+            }
+
+            /*------------------------------------------------------------------------------------------------*/
+
+            //ถามแคลอรี่อาหาร
+            else if($text == "อยากรู้ แคลอรี่ของ ข้าวมันไก่"){
+
+              $messagess = [
+              'type' => 'template',
+              'altText' => 'ข้าวมันไก่',
+              'template' => array(
+
+                'type' => 'buttons',
+                'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fchicken-rice.jpg?alt=media&token=44c90fe8-8f2b-43fb-ad4b-defac632cde1',
+                'title' => 'ข้าวมันไก่',
+                'text' => 'ให้พลังงานเท่ากับ 585 กิโลแคลอรี่',
+                'actions' => array(
+
+                  array(
+                    'type' => 'postback',
+                    'label' => 'ถามแคลอรี่อย่างอื่นอีก',
+                    'data' => 'ถามแคลอรี่อย่างอื่นอีก',
+                    'text' => 'ถามแคลอรี่อย่างอื่นอีก')
+                  ,array(
+                    'type' => 'postback',
+                    'label' => 'พอแล้ว',
+                    'data' => 'พอแล้ว',
+                    'text' => 'พอแล้ว')
+
+                  )
+                )
+              ];
+
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
 
             }
+
+
+            //ถามแคลอรี่อย่างอื่นอีก
+            else if($text == "ถามแคลอรี่อย่างอื่นอีก"){
+
+              $messages = [
+              'type' => 'text',
+              'text' => 'อยากรู้อาหารอะไร เชิญถาม ><'];
+            }
+
+            //ขนมปังฮาวายเอี้ยน
+            else if($text == "อยากรู้ แคลอรี่ของ ขนมปังฮาวายเอี้ยน"){
+
+              $messagess = [
+              'type' => 'template',
+              'altText' => 'ขนมปังฮาวายเอี้ยน',
+              'template' => array(
+
+                'type' => 'buttons',
+                'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9B%E0%B8%B1%E0%B8%87%E0%B8%AE%E0%B8%B2%E0%B8%A7%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AD%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%99.jpg?alt=media&token=c1302b45-f09e-4397-b188-5e99a41ef1a3',
+                'title' => 'ขนมปังฮาวายเอี้ยน 1 ชิ้น',
+                'text' => 'ให้พลังงานเท่ากับ 300 กิโลแคลอรี่',
+                'actions' => array(
+
+                  array(
+                    'type' => 'postback',
+                    'label' => 'ถามแคลอรี่อย่างอื่นอีก',
+                    'data' => 'ถามแคลอรี่อย่างอื่นอีก',
+                    'text' => 'ถามแคลอรี่อย่างอื่นอีก')
+                  ,array(
+                    'type' => 'postback',
+                    'label' => 'พอแล้ว',
+                    'data' => 'พอแล้ว',
+                    'text' => 'พอแล้ว')
+
+                  )
+                )
+              ];
+
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
+
+            }
+
+            //พอแล้ว
+            else if($text == "พอแล้ว"){
+
+              $messages = [
+              'type' => 'text',
+              'text' => 'โอเค '];
+            }
+
+
+            /*------------------------------------------------------------------------------------------------*/
+
+
+            //มื้ออาหาร
+
 
             
             //แคลอรี่ เกิน
