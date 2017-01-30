@@ -64,8 +64,8 @@ if (!is_null($events['events'])) {
             else if($text == "แคลอรี่ของ ข้าวมันไก่"){
               $messagess = [
               'type' => 'image',
-              'originalContentUrl'=> 'http://www.baania.com/sites/default/files/property-project/764/photo/59921.jpg',
-              'previewImageUrl'=> 'http://www.baania.com/sites/default/files/property-project/764/photo/59921.jpg'
+              'originalContentUrl'=> 'https://new.forest.go.th/it/wp-content/uploads/sites/21/2015/06/Tulips-1024x768.jpg',
+              'previewImageUrl'=> 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg'
               ];
 
                 // LINEBotTiny
