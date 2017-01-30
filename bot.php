@@ -109,7 +109,7 @@ if (!is_null($events['events'])) {
               'template' => array(
 
                 'type' => 'buttons',
-                'thumbnailImageUrl' => '',
+            //     'thumbnailImageUrl' => '',
                 'title' => 'อาหารสุขภาพ หรือ วิธีออกกำลังกาย ?',
                 'text' => 'กรุณาเลือก',
                 'actions' => array(
