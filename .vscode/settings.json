@@ -2,5 +2,5 @@
 {
     "php.validate.run": "onType",
     // "php.validate.executablePath": "c:/php/php.exe"
-    "php.validate.executablePath": "D:/wamp64/bin/php/php7.0.4/php.exe"
+    "php.validate.executablePath": "C:/wamp64/bin/php/php7.0.10/php.exe"
 }
