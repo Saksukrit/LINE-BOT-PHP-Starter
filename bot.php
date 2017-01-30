@@ -246,7 +246,7 @@ if (!is_null($events['events'])) {
                     )
                   ,array(
                     'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A2%E0%B8%B2%E0%B8%B0%E0%B9%86.jpg?alt=media&token=b5ae33eb-3d6d-4502-859a-c3002a38f4d0',
-                    'title' => 'วิ่งเหยาะๆ',
+                    'title' => 'วิ่งเหยาะ',
                     'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 600-750 กิโลแคลอรี่',
                     'actions' => array(
 
