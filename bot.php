@@ -16,6 +16,8 @@ require_once('./LINEBot.php');
 
 require_once('./LINEBotTiny.php');
 
+$command = 'non';
+
 $channelAccessToken = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkmKpKys/TTEvQO99XihXnZaPKVO/4VsQXLqs8LQZdmskXuwncFHyI8/GZjv91J9Q/YN/pmATJTvlp6YOxOBypA2QFg1r6OwdB04t89/1O/w1cDnyilFU=';
 $channelSecret = '98ca0db8ed81032c7d483cef30bcb190';
 
@@ -106,6 +108,8 @@ if (!is_null($events['events'])) {
               $messages = [
               'type' => 'text',
               'text' => 'โอเค'];
+              
+              $command = 'continue';
             }
 
 
@@ -151,6 +155,14 @@ if (!is_null($events['events'])) {
                 );
 
             }
+
+
+            else if($text == "ไม่ล่ะ ขอบคุณ"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'โอเค'];
+            }
+            
 
             //เลือกอาหารสุขภาพ
             else if($text == "อาหารสุขภาพ"){/**    carousel ***********/
@@ -459,6 +471,38 @@ if (!is_null($events['events'])) {
             curl_close($ch);
 
             echo $result . "\r\n";
+
+            if($command == 'continue'){
+              $messages = [
+              'type' => 'text',
+              'text' => 'ถามต่อเลย'
+              ];
+
+
+              $url = 'https://api.line.me/v2/bot/message/reply';
+              $data = [
+              'replyToken' => $replyToken,
+              'messages' => [$messages],
+              ];
+              $post = json_encode($data);
+              $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+              $ch = curl_init($url);
+              curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+              curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+              curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+              $result = curl_exec($ch);
+              curl_close($ch);
+
+              echo $result . "\r\n";
+
+              $command = 'non';
+            }
+
+            
+
           }
         }
       }
