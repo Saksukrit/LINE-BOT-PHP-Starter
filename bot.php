@@ -79,12 +79,12 @@ if (!is_null($events['events'])) {
                   array(
                     "type"=> "message",
                     "label"=> "ใช่",
-                    "text"=> "ใช่ ฉันต้องการคำแนะนำ"
+                    "text"=> "ใช่"
                     ),
                   array(
                     "type"=> "message",
                     "label"=> "ไม่",
-                    "text"=> "ไม่ ฉันไม่ต้องการคำแนะนำ"
+                    "text"=> "ไม่"
                     )
                   )
                 )
@@ -102,6 +102,14 @@ if (!is_null($events['events'])) {
             }
 
             //เสนอทางเลือก
+            else if($text == "ไม่"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'โอเค'];
+            }
+
+
+
             else if ($text == "ใช่") {
               $messagess = [
               'type' => 'template',
@@ -225,8 +233,7 @@ if (!is_null($events['events'])) {
                   array(
                     'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%82%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A2%E0%B8%B2%E0%B8%99.jpg?alt=media&token=ee0253c8-63e1-42db-a871-88370983760b',
                     'title' => 'ขี่จักรยาน',
-                    'text' => 'ด้วยความเร็ว 14.4กม./ชม.  เป็นเวลา 1 ชั่วโมง 
-                    เผาผลาญได้ 415 กิโลแคลอรี่',
+                    'text' => 'ด้วยความเร็ว 14.4กม./ชม.  เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 415 กิโลแคลอรี่',
                     'actions' => array(
 
                       array(
