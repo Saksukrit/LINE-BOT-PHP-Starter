@@ -102,7 +102,7 @@ if (!is_null($events['events'])) {
             }
 
             //เสนอทางเลือก
-            else if ($text == "ใช่ ฉันต้องการคำแนะนำ") {
+            else if ($text == "ใช่") {
               $messagess = [
               'type' => 'template',
               'altText' => 'คำแนะนำ',
