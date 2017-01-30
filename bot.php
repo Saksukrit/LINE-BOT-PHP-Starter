@@ -59,10 +59,25 @@ if (!is_null($events['events'])) {
 
             $messages = [
             'type' => 'text',
-            'text' => 'ข้าวมันไก่ มีพลังงานเท่ากับ 585 กิโลแคลอรี่ '];
+            'text' => 'ข้าวมันไก่ มีพลังงานเท่ากับ 585 กิโลแคลอรี่'];
             }
-            
+          else if($text == "img"){
+            $messagess = [
+             'type' => 'image',
+            'originalContentUrl'=> 'https://new.forest.go.th/it/wp-content/uploads/sites/21/2015/06/Tulips-1024x768.jpg',
+            'previewImageUrl'=> 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg'
+            ];
+
+                // LINEBotTiny
+             $client->replyMessage(
+            array(
+                'replyToken' => $event['replyToken'],
+                'messages' => [$messagess]
+                ));
+            }  
           
+
+
           
             //******  template  buttons *******
   else if ($text == "buttons") {
@@ -210,7 +225,7 @@ else {
                 // Build message to reply back
     $messages = [
     'type' => 'text',
-    'text' => $text
+    'text' => 'ขอโทษ ฉัันไม่เข้าใจ'
     ];
 }
 
