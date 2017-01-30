@@ -169,7 +169,7 @@ if (!is_null($events['events'])) {
                       )
                     )
                   ,array(
-                  //   'thumbnailImageUrl' => 'http://food.mthai.com/app/uploads/2013/03/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%A2%E0%B8%B3%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%8B%E0%B8%AD%E0%B8%87.jpg',
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fmenu_115_2105310359.jpg?alt=media&token=73090fa5-af11-4f00-afc2-65da2eda0659',
                     'title' => 'ยำปลากระป๋อง 1 ถ้วย',
                     'text' => ' 55 กิโลแคลอรี่',
                     'actions' => array(
