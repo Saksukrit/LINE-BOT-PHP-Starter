@@ -29,6 +29,11 @@ $access_token = 'uEaFS7lHeCcF0FEBVNQtuBTVpwVzjMCSebgBPdA/XUqgxzpYg8MHySfkmKpKys/
 do{
 // Get POST body content
   $content = file_get_contents('php://input');
+
+  if($command != "non"){
+    $content = "continue";
+  }
+
 // Parse JSON
   $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -112,6 +117,13 @@ do{
               'text' => 'โอเค'];
               
               $command = "continue";
+            }
+
+            else if($text == "continue"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'ถามต่อ'];
+               $command = "non";
             }
 
 
