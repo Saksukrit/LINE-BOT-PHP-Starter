@@ -61,21 +61,53 @@ if (!is_null($events['events'])) {
               'type' => 'text',
               'text' => 'ข้าวมันไก่ มีพลังงานเท่ากับ 585 กิโลแคลอรี่'];
             }
-            else if($text == "แคลอรี่ของ ข้าวมันไก่"){
+
+            
+            //แคลอรี่ เกิน
+            else if($text == "bot ตอนนี้แคลอรี่เกินกำหนดมั้ย"){
+
+              $messages = [
+              'type' => 'text',
+              'text' => 'แคลอรี่ของคุณเกินกำหนดแล้ว
+              แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่'];
+
               $messagess = [
-              'type' => 'image',
-              'originalContentUrl'=> 'https://static8-th.orstatic.com/userphoto/photo/2/224/00EN7343312719D245B1E4px.jpg',
-              'previewImageUrl'=> 'https://static8-th.orstatic.com/userphoto/photo/2/224/00EN7343312719D245B1E4px.jpg'
+              "type"=> "template",
+              "altText"=> "แคลอรี่ของคุณเกินกำหนดแล้ว
+              แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่",
+              "template"=> array(
+                "type"=> "confirm",
+                "text"=> "แคลอรี่ของคุณเกินกำหนดแล้ว
+                แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่
+                คุณต้องการคำแนะนำเกี่ยวกับอาหารสุขภาพ หรือวิธีการออกกำลังกายมั้ย ?",
+                "actions"=> array(
+                  array(
+                    "type"=> "message",
+                    "label"=> "ใช่",
+                    "text"=> "ใช่"
+                    ),
+                  array(
+                    "type"=> "message",
+                    "label"=> "ไม่",
+                    "text"=> "ไม่"
+                    )
+                  )
+                )
               ];
+
 
                 // LINEBotTiny
               $client->replyMessage(
                 array(
                   'replyToken' => $event['replyToken'],
                   'messages' => [$messagess]
-                  ));
-            }  
-            
+                  )
+                );
+
+            }
+
+            //เสนออาหารสุขภาพ
+
 
 
             
