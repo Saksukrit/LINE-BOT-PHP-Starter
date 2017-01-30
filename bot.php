@@ -111,7 +111,7 @@ if (!is_null($events['events'])) {
               else if($text == "ไม่"){
                 $messages = [
                 'type' => 'text',
-                'text' => 'โอเค'];
+                'text' => $command];
                 
                 $command = "continue";
               }
