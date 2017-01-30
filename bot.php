@@ -155,7 +155,7 @@ if (!is_null($events['events'])) {
                 'type' => 'carousel',
                 'columns' => array(
                   array(
-                  //   'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_300577481.jpg',
+                    'thumbnailImageUrl' => 'http://upic.me/i/30/87_m_month1.jpg',
                     'title' => 'ฟรุตสลัด 1 ถ้วย',
                     'text' => ' 180 กิโลแคลอรี่',
                     'actions' => array(
@@ -169,7 +169,7 @@ if (!is_null($events['events'])) {
                       )
                     )
                   ,array(
-                  //   'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/12342.jpg',
+                    'thumbnailImageUrl' => 'http://food.mthai.com/app/uploads/2013/03/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%A2%E0%B8%B3%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%8B%E0%B8%AD%E0%B8%87.jpg',
                     'title' => 'ยำปลากระป๋อง 1 ถ้วย',
                     'text' => ' 55 กิโลแคลอรี่',
                     'actions' => array(
@@ -183,7 +183,7 @@ if (!is_null($events['events'])) {
                       )
                     )
                   ,array(
-                  //   'thumbnailImageUrl' => 'http://img.tlcdn1.com/women/2016/06/shutterstock_112369409.jpg',
+                    'thumbnailImageUrl' => 'http://www.thestatusbangkok.com/iresize/250x250/menu_115_2105310359.jpg',
                     'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
                     'text' => ' 80 กิโลแคลอรี่',
                     'actions' => array(
