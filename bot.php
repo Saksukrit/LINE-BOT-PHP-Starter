@@ -66,11 +66,6 @@ if (!is_null($events['events'])) {
             //แคลอรี่ เกิน
             else if($text == "bot ตอนนี้แคลอรี่เกินกำหนดมั้ย"){
 
-              $messages = [
-              'type' => 'text',
-              'text' => 'แคลอรี่ของคุณเกินกำหนดแล้ว
-              แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่'];
-
               $messagess = [
               "type"=> "template",
               "altText"=> "แคลอรี่ของคุณเกินกำหนดแล้ว
@@ -84,12 +79,12 @@ if (!is_null($events['events'])) {
                   array(
                     "type"=> "message",
                     "label"=> "ใช่",
-                    "text"=> "ใช่"
+                    "text"=> "ใช่ ฉันต้องการคำแนะนำ"
                     ),
                   array(
                     "type"=> "message",
                     "label"=> "ไม่",
-                    "text"=> "ไม่"
+                    "text"=> "ไม่ ฉันไม่ต้องการคำแนะนำ"
                     )
                   )
                 )
@@ -106,7 +101,112 @@ if (!is_null($events['events'])) {
 
             }
 
-            //เสนออาหารสุขภาพ
+            //เสนอทางเลือก
+            else if ($text == "ใช่ ฉันต้องการคำแนะนำ") {
+              $messagess = [
+              'type' => 'template',
+              'altText' => 'คำแนะนำ',
+              'template' => array(
+
+                'type' => 'buttons',
+                'thumbnailImageUrl' => '',
+                'title' => 'อาหารสุขภาพ หรือ วิธีออกกำลังกาย ?',
+                'text' => 'กรุณาเลือก',
+                'actions' => array(
+
+                  array(
+                    'type' => 'postback',
+                    'label' => 'อาหารสุขภาพ',
+                    'data' => 'อาหารสุขภาพ',
+                    'text' => 'อาหารสุขภาพ')
+                  ,array(
+                    'type' => 'postback',
+                    'label' => 'ออกกำลังกาย',
+                    'data' => 'ออกกำลังกาย',
+                    'text' => 'ออกกำลังกาย')
+                  ,array(
+                    'type' => 'postback',
+                    'label' => 'ไม่ล่ะ ขอบคุณ',
+                    'data' => 'ไม่ล่ะ ขอบคุณ',
+                    'text' => 'ไม่ล่ะ ขอบคุณ')
+
+                  )
+                )
+              ];
+
+                // LINEBotTiny
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
+
+            }
+
+            //เลือกอาหารสุขภาพ
+            else if($text == "อาหารสุขภาพ"){/**    carousel ***********/
+
+              $messagess = [
+              'type' => 'template',
+              'altText' => 'อาหารสุขภาพ',
+              'template' => array(
+
+                'type' => 'carousel',
+                'columns' => array(
+                  array(
+                    'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/5/56/Chocolate_cupcakes.jpg',
+                    'title' => 'Cup Cake',
+                    'text' => 'Please select',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'Buy',
+                        'data' => 'buy',
+                        'text' => 'buy')
+                      ,array(
+                        'type' => 'postback',
+                        'label' => 'Add to cart',
+                        'data' => 'add to cart',
+                        'text' => 'add')
+
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Dazzling%27s_honey_toast%2C_Taipei%2C_Taiwan_%288343904503%29.jpg/640px-Dazzling%27s_honey_toast%2C_Taipei%2C_Taiwan_%288343904503%29.jpg?uselang=th',
+                    'title' => 'Honey Toast',
+                    'text' => 'Please select',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'Buy',
+                        'data' => 'buy',
+                        'text' => 'buy')
+                      ,array(
+                        'type' => 'postback',
+                        'label' => 'Add to cart',
+                        'data' => 'add to cart',
+                        'text' => 'add')
+
+                      )
+                    )
+                  )
+                )
+              ];
+
+
+            // LINEBotTiny
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
+
+              
+            }
 
 
 
@@ -230,13 +330,15 @@ if (!is_null($events['events'])) {
               ];
 
 
-      // LINEBotTiny
+            // LINEBotTiny
               $client->replyMessage(
                 array(
                   'replyToken' => $event['replyToken'],
                   'messages' => [$messagess]
                   )
                 );
+
+              
             }else if($text == "img"){
               $messagess = [
               'type' => 'image',
