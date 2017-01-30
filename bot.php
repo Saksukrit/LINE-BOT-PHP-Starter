@@ -168,7 +168,7 @@ if (!is_null($events['events'])) {
             }
 
             //แสดงค่า BMR TDEE
-            else if($text == "ไม่ออกกำลังกาย หรือออกกำลังกายน้อยมาก"){
+            else if($text == "ออกกำลังกายน้อยมาก"){
 
               $messages = [
               'type' => 'text',
@@ -180,14 +180,60 @@ if (!is_null($events['events'])) {
               *TDEE (Total Daily Energy Expenditure) พลังงานที่คุณใช้ในแต่ละวัน'];
             }
 
+            //แสดงข้อมูลรวม
+            else if($text == "ต้องการดูข้อมูลทั้งหมด"){
+
+              $messages = [
+              'type' => 'text',
+              'text' => 'ได้เลย
+              Saksukrit
+              คุณเพศ ชาย   อายุ 21 ปี
+              น้ำหนัก 78 กิโลกรัม  ส่วนสูง 178 เซนติเมตร
+
+              คุณมีค่า BMR เท่ากับ 1862 กิโลแคลอรี่
+              และมีค่า TDEE เท่ากับ 2234 กิโลแคลอรี่'];
+            }
+
 
 
 
             else if($text == "อยากรู้ แคลอรี่ของ ข้าวมันไก่"){
 
-              $messages = [
-              'type' => 'text',
-              'text' => 'ข้าวมันไก่ มีพลังงานเท่ากับ 585 กิโลแคลอรี่'];
+             
+              $messagess = [
+              'type' => 'template',
+              'altText' => 'ข้าวมันไก่',
+              'template' => array(
+
+                'type' => 'buttons',
+                'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fchicken-rice.jpg?alt=media&token=44c90fe8-8f2b-43fb-ad4b-defac632cde1',
+                'title' => 'ข้าวมันไก่',
+                'text' => 'ให้พลังงานเท่ากับ 585 กิโลแคลอรี่',
+            //     'actions' => array(
+
+            //       array(
+            //         'type' => 'postback',
+            //         'label' => 'Yes ,Now I want.',
+            //         'data' => 'yes',
+            //         'text' => 'yes')
+            //       ,array(
+            //         'type' => 'postback',
+            //         'label' => 'No ,I not like.',
+            //         'data' => 'no',
+            //         'text' => 'no')
+
+            //       )
+                )
+              ];
+
+                // LINEBotTiny
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
+
             }
 
             
