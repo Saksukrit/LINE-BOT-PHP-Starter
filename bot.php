@@ -221,6 +221,71 @@ if (!is_null($events['events'])) {
 
 
             // ออกกำลังกาย
+            else if($text == "ออกกำลังกาย"){/**    carousel ***********/
+
+              $messagess = [
+              'type' => 'template',
+              'altText' => 'วิธีออกกำลังกาย',
+              'template' => array(
+
+                'type' => 'carousel',
+                'columns' => array(
+                  array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%94%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89.jpg?alt=media&token=cc82fcfd-1c1a-4e62-8f53-b33231a6a370',
+                    'title' => 'ฟรุตสลัด 1 ถ้วย',
+                    'text' => ' 180 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+                      
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F1362072096.jpg?alt=media&token=71e3f29e-a60f-4c0e-b883-0c3bedfca04f',
+                    'title' => 'ยำปลากระป๋อง 1 ถ้วย',
+                    'text' => ' 55 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fmenu_115_2105310359.jpg?alt=media&token=73090fa5-af11-4f00-afc2-65da2eda0659',
+                    'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
+                    'text' => ' 80 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+
+                      )
+                    )
+                  )
+                )
+              ];
+
+
+            // LINEBotTiny
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
+              
+            }
             else if($text == "ออกกำลังกาย"){
 
               $messagess = [
