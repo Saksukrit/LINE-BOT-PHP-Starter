@@ -497,7 +497,7 @@ if (!is_null($events['events'])) {
 
               curl_close($ch);
 
-            }while($command == "continue");
+            }while($command == "non");
 
             echo $result . "\r\n";
 
