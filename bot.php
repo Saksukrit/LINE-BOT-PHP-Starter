@@ -191,11 +191,11 @@ if (!is_null($events['events'])) {
     ];
 
                 // LINEBotTiny
-    $client->replyMessage(
-          array(
-                'replyToken' => $event['replyToken'],
-                'messages' => [$messagess]
-                ));
+//     $client->replyMessage(
+//           array(
+//                 'replyToken' => $event['replyToken'],
+//                 'messages' => [$messagess]
+//                 ));
 }
 
             //******  other  *******
