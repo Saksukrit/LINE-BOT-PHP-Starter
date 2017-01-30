@@ -44,6 +44,7 @@ if (!is_null($events['events'])) {
             $text_ex = explode(':', $text);   //explode text by ':'
 
 
+            // greeting
             if($text == "สวัสดี"){
 
             $messages = [
@@ -53,9 +54,15 @@ if (!is_null($events['events'])) {
             คุณสามารถสอบถามข้อมูลอาหารได้นะ'];
 
             }
+
+            else if($text == "แคลอรี่ของ ข้าวมันไก่"){
+
+            $messages = [
+            'type' => 'text',
+            'text' => 'ข้าวมันไก่ มีพลังงานเท่ากับ 585 กิโลแคลอรี่ '];
+            }
             
           
-
           
             //******  template  buttons *******
   else if ($text == "buttons") {
