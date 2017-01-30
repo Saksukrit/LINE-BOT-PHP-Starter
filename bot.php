@@ -176,34 +176,34 @@ if (!is_null($events['events'])) {
                       
                       )
                     )
-                  ,array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F1362072096.jpg?alt=media&token=71e3f29e-a60f-4c0e-b883-0c3bedfca04f',
-                    'title' => 'ยำปลากระป๋อง 1 ถ้วย',
-                    'text' => ' 55 กิโลแคลอรี่',
-                    'actions' => array(
+                  // ,array(
+                  //   'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F1362072096.jpg?alt=media&token=71e3f29e-a60f-4c0e-b883-0c3bedfca04f',
+                  //   'title' => 'ยำปลากระป๋อง 1 ถ้วย',
+                  //   'text' => ' 55 กิโลแคลอรี่',
+                  //   'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
+                  //     array(
+                  //       'type' => 'postback',
+                  //       'label' => 'ข้อมูลเพิ่มเติม',
+                  //       'data' => 'ข้อมูลเพิ่มเติม',
+                  //       'text' => 'ข้อมูลเพิ่มเติม')
 
-                      )
-                    )
-                  ,array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fmenu_115_2105310359.jpg?alt=media&token=73090fa5-af11-4f00-afc2-65da2eda0659',
-                    'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
-                    'text' => ' 80 กิโลแคลอรี่',
-                    'actions' => array(
+                  //     )
+                  //   )
+                  // ,array(
+                  //   'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fmenu_115_2105310359.jpg?alt=media&token=73090fa5-af11-4f00-afc2-65da2eda0659',
+                  //   'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
+                  //   'text' => ' 80 กิโลแคลอรี่',
+                  //   'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
+                  //     array(
+                  //       'type' => 'postback',
+                  //       'label' => 'ข้อมูลเพิ่มเติม',
+                  //       'data' => 'ข้อมูลเพิ่มเติม',
+                  //       'text' => 'ข้อมูลเพิ่มเติม')
 
-                      )
-                    )
+                  //     )
+                  //   )
                   )
                 )
               ];
@@ -231,9 +231,9 @@ if (!is_null($events['events'])) {
                 'type' => 'carousel',
                 'columns' => array(
                   array(
-                  //   'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%82%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A2%E0%B8%B2%E0%B8%99.jpg?alt=media&token=ee0253c8-63e1-42db-a871-88370983760b',
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%82%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A2%E0%B8%B2%E0%B8%99.jpg?alt=media&token=ee0253c8-63e1-42db-a871-88370983760b',
                     'title' => 'ขี่จักรยาน',
-                    'text' => 'ด้วยความเร็ว 14.4กม./ชม.  เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 415 กิโลแคลอรี่',
+                    'text' => ' ด้วยความเร็ว 14.4กม./ชม.  เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 415 กิโลแคลอรี่',
                     'actions' => array(
 
                       array(
@@ -245,9 +245,9 @@ if (!is_null($events['events'])) {
                       )
                     )
                   ,array(
-                  //   'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A2%E0%B8%B2%E0%B8%B0%E0%B9%86.jpg?alt=media&token=b5ae33eb-3d6d-4502-859a-c3002a38f4d0',
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A2%E0%B8%B2%E0%B8%B0%E0%B9%86.jpg?alt=media&token=b5ae33eb-3d6d-4502-859a-c3002a38f4d0',
                     'title' => 'วิ่งเหยาะๆ',
-                    'text' => 'เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 600-750 กิโลแคลอรี่',
+                    'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 600-750 กิโลแคลอรี่',
                     'actions' => array(
 
                       array(
@@ -259,9 +259,9 @@ if (!is_null($events['events'])) {
                       )
                     )
                   ,array(
-                  //   'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AE%E0%B8%B9%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AE%E0%B8%B9%E0%B8%9B.jpg?alt=media&token=42c59d18-1303-4bc7-a551-6746b6470ebb',
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AE%E0%B8%B9%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AE%E0%B8%B9%E0%B8%9B.jpg?alt=media&token=42c59d18-1303-4bc7-a551-6746b6470ebb',
                     'title' => 'เล่นฮูล่าฮูป',
-                    'text' => 'เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 430 กิโลแคลอรี่',
+                    'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 430 กิโลแคลอรี่',
                     'actions' => array(
 
                       array(
@@ -285,7 +285,6 @@ if (!is_null($events['events'])) {
                   )
                 );
 
-              
             }
 
 
