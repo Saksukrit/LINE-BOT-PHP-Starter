@@ -234,7 +234,9 @@ if (!is_null($events['events'])) {
 
               $messages = [
               'type' => 'text',
-              'text' => 'บันทึกข้อมูลเรียบร้อย'];
+              'text' => 'บันทึกข้อมูลเรียบร้อย
+              
+              เชิญใช้งานต่อไปได้เลย'];
             }
 
             /*------------------------------------------------------------------------------------------------*/
@@ -337,8 +339,15 @@ if (!is_null($events['events'])) {
 
 
             //มื้ออาหาร
+            else if($text == "ต้องการบันทึกอาหารมื้อเช้า"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'ได้เลย มื้อเช้าคุณทานอะไร ?'];
+            }
 
 
+
+            /*------------------------------------------------------------------------------------------------*/
             
             //แคลอรี่ เกิน
             else if($text == "bot ตอนนี้แคลอรี่เกินกำหนดมั้ย"){
@@ -572,75 +581,23 @@ if (!is_null($events['events'])) {
                 );
               
             }
-            
-            //******  template  buttons *******
-            else if ($text == "buttons") {
-              $messagess = [
-              'type' => 'template',
-              'altText' => 'this is a buttons template',
-              'template' => array(
 
-                'type' => 'buttons',
-                'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/7/74/Tarte_au_fromage_blanc.png',
-                'title' => 'Do you like it?',
-                'text' => 'Please select',
-                'actions' => array(
-
-                  array(
-                    'type' => 'postback',
-                    'label' => 'Yes ,Now I want.',
-                    'data' => 'yes',
-                    'text' => 'yes')
-                  ,array(
-                    'type' => 'postback',
-                    'label' => 'No ,I not like.',
-                    'data' => 'no',
-                    'text' => 'no')
-
-                  )
-                )
-              ];
-
-                // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
+            /*------------------------------------------------------------------------------------------------*/
 
 
-            }else if($text == "confirm"){   /**    confirm ***********/
-              $messagess = [
-              "type"=> "template",
-              "altText"=> "this is a confirm template",
-              "template"=> array(
-                "type"=> "confirm",
-                "text"=> "Are you sure?",
-                "actions"=> array(
-                  array(
-                    "type"=> "message",
-                    "label"=> "Yes",
-                    "text"=> "yes"
-                    ),
-                  array(
-                    "type"=> "message",
-                    "label"=> "No",
-                    "text"=> "no"
-                    )
-                  )
-                )
-              ];
-
-                // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
-
+            //กายภาพบำบัดสำหรับผู้ใช้ที่ป่วย
+            else if($text == ""){
+             
             }
+            
+            //อยากได้กล้าม
+            else if($text == ""){
+             
+            }
+
+            /*------------------------------------------------------------------------------------------------*/
+
+
             
             else if($text == "img"){
               $messagess = [
