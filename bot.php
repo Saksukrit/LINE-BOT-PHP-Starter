@@ -350,10 +350,6 @@ if (!is_null($events['events'])) {
             //ถามจากแคลอรี่
             else if($text == "อยากรู้ อาหารหลัก ที่แคลอรี่ไม่เกิน 500 กิโลแคลอรี่"){
 
-              $messages = [
-              'type' => 'text',
-              'text' => 'โอเค '];
-
               $messagess = [
               'type' => 'template',
               'altText' => 'อาหารหลักให้แคลอรี่ไม่เกิน 500 กิโลแคลอรี่',
@@ -433,398 +429,410 @@ if (!is_null($events['events'])) {
                     )
                   )
                 )
-              ];
+];
 
 
             // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
+$client->replyMessage(
+  array(
+    'replyToken' => $event['replyToken'],
+    'messages' => [$messagess]
+    )
+  );
 
-            }
+}
 
 
-            /*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
 
 
             //มื้ออาหาร เช้า
-            else if($text == "ต้องการบันทึกอาหารมื้อเช้า"){
-              $messages = [
-              'type' => 'text',
-              'text' => 'ได้เลย มื้อเช้าคุณทานอะไร ?'];
-            }
+else if($text == "ต้องการบันทึกอาหารมื้อเช้า"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'ได้เลย มื้อเช้าคุณทานอะไร ?'];
+}
 
 
-            else if($text == "ข้าวขาหมู 1 จาน"){
-              $messages = [
-              'type' => 'text',
-              'text' => 'ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
-              
-              อย่างอื่นเพิ่มมั้ย ?'];
-            }
+else if($text == "ข้าวขาหมู 1 จาน"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
+  
+  อย่างอื่นเพิ่มมั้ย ?'];
+}
 
-            else if($text == "กล้วยน้ำว้า 1 ผล"){
-              $messages = [
-              'type' => 'text',
-              'text' => 'กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
-              
-              อย่างอื่นเพิ่มมั้ย ?'];
-            }
+else if($text == "กล้วยน้ำว้า 1 ผล"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
+  
+  อย่างอื่นเพิ่มมั้ย ?'];
+}
 
-            
-            else if($text == "ไม่ล่ะ"){
-              $messages = [
-              'type' => 'text',
-              'text' => 'โอเค สรุปรายการมื้อเช้า ของวันที่ 1/2/2560
-              รายการ
-              ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
-              กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
-              พลังงานรวม 750 กิโลแคลอรี่'];
 
-              $messagess = [
-              "type"=> "template",
-              "altText"=> "สรุปรายการมื้อเช้า",
-              "template"=> array(
-                "type"=> "confirm",
-                "text"=> "โอเค สรุปรายการมื้อเช้า ของวันที่ 1/2/2560
-                รายการ
-                ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
-                กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
-                พลังงานรวม 750 กิโลแคลอรี่
-                
-                ต้องการบันทึก หรือแก้ไข",
-                "actions"=> array(
-                  array(
-                    "type"=> "message",
-                    "label"=> "บันทึก",
-                    "text"=> "บันทึก"
-                    ),
-                  array(
-                    "type"=> "message",
-                    "label"=> "แก้ไข",
-                    "text"=> "แก้ไข"
-                    )
-                  )
-                )
-              ];
+else if($text == "ไม่ล่ะ"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'โอเค สรุปรายการมื้อเช้า ของวันที่ 1/2/2560
+  รายการ
+  ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
+  กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
+  พลังงานรวม 750 กิโลแคลอรี่'];
+
+  $messagess = [
+  "type"=> "template",
+  "altText"=> "สรุปรายการมื้อเช้า",
+  "template"=> array(
+    "type"=> "confirm",
+    "text"=> "โอเค สรุปรายการมื้อเช้า ของวันที่ 1/2/2560
+    รายการ
+    ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
+    กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
+    พลังงานรวม 750 กิโลแคลอรี่
+    
+    ต้องการบันทึก หรือแก้ไข",
+    "actions"=> array(
+      array(
+        "type"=> "message",
+        "label"=> "บันทึก",
+        "text"=> "บันทึก"
+        ),
+      array(
+        "type"=> "message",
+        "label"=> "แก้ไข",
+        "text"=> "แก้ไข"
+        )
+      )
+    )
+  ];
 
 
                 // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
+  $client->replyMessage(
+    array(
+      'replyToken' => $event['replyToken'],
+      'messages' => [$messagess]
+      )
+    );
 
 
 
-            }
+}
 
             //บันทึก
-            else if($text == "บันทึก"){
-              $messages = [
-              'type' => 'text',
-              'text' => 'บันทึกข้อมูลเรียบร้อย ^^'];
-            }
+else if($text == "บันทึก"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'บันทึกข้อมูลเรียบร้อย ^^'];
+}
 
 
 
 
-            /*------------------------------------------------------------------------------------------------*/
-            
+/*------------------------------------------------------------------------------------------------*/
+
             //แคลอรี่ เกิน
-            else if($text == "bot ตอนนี้แคลอรี่เกินกำหนดมั้ย"){
+else if($text == "bot ตอนนี้แคลอรี่เกินกำหนดมั้ย"){
 
-              $messagess = [
-              "type"=> "template",
-              "altText"=> "แคลอรี่ของคุณเกินกำหนดแล้ว
-              แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่",
-              "template"=> array(
-                "type"=> "confirm",
-                "text"=> "แคลอรี่ของคุณเกินกำหนด(TDEE)แล้ว
-                แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่
-                คุณต้องการคำแนะนำเกี่ยวกับอาหารสุขภาพ หรือวิธีการออกกำลังกายมั้ย ?",
-                "actions"=> array(
-                  array(
-                    "type"=> "message",
-                    "label"=> "ใช่",
-                    "text"=> "ใช่"
-                    ),
-                  array(
-                    "type"=> "message",
-                    "label"=> "ไม่",
-                    "text"=> "ไม่"
-                    )
-                  )
-                )
-              ];
+  $messagess = [
+  "type"=> "template",
+  "altText"=> "แคลอรี่ของคุณเกินกำหนดแล้ว
+  แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่",
+  "template"=> array(
+    "type"=> "confirm",
+    "text"=> "แคลอรี่ของคุณเกินกำหนด(TDEE)แล้ว
+    แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่
+    คุณต้องการคำแนะนำเกี่ยวกับอาหารสุขภาพ หรือวิธีการออกกำลังกายมั้ย ?",
+    "actions"=> array(
+      array(
+        "type"=> "message",
+        "label"=> "ใช่",
+        "text"=> "ใช่"
+        ),
+      array(
+        "type"=> "message",
+        "label"=> "ไม่",
+        "text"=> "ไม่"
+        )
+      )
+    )
+  ];
 
 
                 // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
+  $client->replyMessage(
+    array(
+      'replyToken' => $event['replyToken'],
+      'messages' => [$messagess]
+      )
+    );
 
-            }
+}
 
             //เสนอทางเลือก
-            else if($text == "ไม่"){
-              $messages = [
-              'type' => 'text',
-              'text' => 'โอเค'];
-              
-              $command = "continue";
-            }
+else if($text == "ไม่"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'โอเค'];
+  
+  $command = "continue";
+}
 
 
-            else if ($text == "ใช่") {
-              $messagess = [
-              'type' => 'template',
-              'altText' => 'คำแนะนำ',
-              'template' => array(
+else if ($text == "ใช่") {
+  $messagess = [
+  'type' => 'template',
+  'altText' => 'คำแนะนำ',
+  'template' => array(
 
-                'type' => 'buttons',
+    'type' => 'buttons',
             //     'thumbnailImageUrl' => '',
-                'title' => 'อาหารสุขภาพ หรือ วิธีออกกำลังกาย ?',
-                'text' => 'กรุณาเลือก',
-                'actions' => array(
+    'title' => 'อาหารสุขภาพ หรือ วิธีออกกำลังกาย ?',
+    'text' => 'กรุณาเลือก',
+    'actions' => array(
 
-                  array(
-                    'type' => 'postback',
-                    'label' => 'อาหารสุขภาพ',
-                    'data' => 'อาหารสุขภาพ',
-                    'text' => 'อาหารสุขภาพ')
-                  ,array(
-                    'type' => 'postback',
-                    'label' => 'ออกกำลังกาย',
-                    'data' => 'ออกกำลังกาย',
-                    'text' => 'ออกกำลังกาย')
-                  ,array(
-                    'type' => 'postback',
-                    'label' => 'ไม่ล่ะ ขอบคุณ',
-                    'data' => 'ไม่ล่ะ ขอบคุณ',
-                    'text' => 'ไม่ล่ะ ขอบคุณ')
+      array(
+        'type' => 'postback',
+        'label' => 'อาหารสุขภาพ',
+        'data' => 'อาหารสุขภาพ',
+        'text' => 'อาหารสุขภาพ')
+      ,array(
+        'type' => 'postback',
+        'label' => 'ออกกำลังกาย',
+        'data' => 'ออกกำลังกาย',
+        'text' => 'ออกกำลังกาย')
+      ,array(
+        'type' => 'postback',
+        'label' => 'ไม่ล่ะ ขอบคุณ',
+        'data' => 'ไม่ล่ะ ขอบคุณ',
+        'text' => 'ไม่ล่ะ ขอบคุณ')
 
-                  )
-                )
-              ];
+      )
+    )
+  ];
 
                 // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
+  $client->replyMessage(
+    array(
+      'replyToken' => $event['replyToken'],
+      'messages' => [$messagess]
+      )
+    );
 
-            }
+}
 
 
-            else if($text == "ไม่ล่ะ ขอบคุณ"){
-              $messages = [
-              'type' => 'text',
-              'text' => 'โอเค'];
-            }
-            
+else if($text == "ไม่ล่ะ ขอบคุณ"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'โอเค'];
+}
+
 
             //เลือกอาหารสุขภาพ
-            else if($text == "อาหารสุขภาพ"){/**    carousel ***********/
+else if($text == "อาหารสุขภาพ"){/**    carousel ***********/
 
-              $messagess = [
-              'type' => 'template',
-              'altText' => 'อาหารสุขภาพ',
-              'template' => array(
+  $messagess = [
+  'type' => 'template',
+  'altText' => 'อาหารสุขภาพ',
+  'template' => array(
 
-                'type' => 'carousel',
-                'columns' => array(
-                  array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%94%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89.jpg?alt=media&token=cc82fcfd-1c1a-4e62-8f53-b33231a6a370',
-                    'title' => 'ฟรุตสลัด 1 ถ้วย',
-                    'text' => ' 180 กิโลแคลอรี่',
-                    'actions' => array(
+    'type' => 'carousel',
+    'columns' => array(
+      array(
+        'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%94%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89.jpg?alt=media&token=cc82fcfd-1c1a-4e62-8f53-b33231a6a370',
+        'title' => 'ฟรุตสลัด 1 ถ้วย',
+        'text' => ' 180 กิโลแคลอรี่',
+        'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
-                      
-                      )
-                    )
-                  ,array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F1362072096.jpg?alt=media&token=71e3f29e-a60f-4c0e-b883-0c3bedfca04f',
-                    'title' => 'ยำปลากระป๋อง 1 ถ้วย',
-                    'text' => ' 55 กิโลแคลอรี่',
-                    'actions' => array(
+          array(
+            'type' => 'postback',
+            'label' => 'ข้อมูลเพิ่มเติม',
+            'data' => 'ข้อมูลเพิ่มเติม',
+            'text' => 'ข้อมูลเพิ่มเติม')
+          
+          )
+        )
+      ,array(
+        'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F1362072096.jpg?alt=media&token=71e3f29e-a60f-4c0e-b883-0c3bedfca04f',
+        'title' => 'ยำปลากระป๋อง 1 ถ้วย',
+        'text' => ' 55 กิโลแคลอรี่',
+        'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
+          array(
+            'type' => 'postback',
+            'label' => 'ข้อมูลเพิ่มเติม',
+            'data' => 'ข้อมูลเพิ่มเติม',
+            'text' => 'ข้อมูลเพิ่มเติม')
 
-                      )
-                    )
-                  ,array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fmenu_115_2105310359.jpg?alt=media&token=73090fa5-af11-4f00-afc2-65da2eda0659',
-                    'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
-                    'text' => ' 80 กิโลแคลอรี่',
-                    'actions' => array(
+          )
+        )
+      ,array(
+        'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2Fmenu_115_2105310359.jpg?alt=media&token=73090fa5-af11-4f00-afc2-65da2eda0659',
+        'title' => 'แกงจืดเต้าหู้หมูสับ 1 ถ้วย',
+        'text' => ' 80 กิโลแคลอรี่',
+        'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
+          array(
+            'type' => 'postback',
+            'label' => 'ข้อมูลเพิ่มเติม',
+            'data' => 'ข้อมูลเพิ่มเติม',
+            'text' => 'ข้อมูลเพิ่มเติม')
 
-                      )
-                    )
-                  )
-                )
-              ];
+          )
+        )
+      )
+    )
+  ];
 
 
             // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
-              
-            }
+  $client->replyMessage(
+    array(
+      'replyToken' => $event['replyToken'],
+      'messages' => [$messagess]
+      )
+    );
+  
+}
 
 
             // ออกกำลังกาย
-            else if($text == "ออกกำลังกาย"){
+else if($text == "ออกกำลังกาย"){
 
-              $messagess = [
-              'type' => 'template',
-              'altText' => 'วิธีออกกำลังกาย',
-              'template' => array(
+  $messagess = [
+  'type' => 'template',
+  'altText' => 'วิธีออกกำลังกาย',
+  'template' => array(
 
-                'type' => 'carousel',
-                'columns' => array(
-                  array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%82%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A2%E0%B8%B2%E0%B8%99.jpg?alt=media&token=ee0253c8-63e1-42db-a871-88370983760b',
-                    'title' => 'ขี่จักรยาน ด้วยความเร็ว 14.4กม./ชม.',
-                    'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 415 กิโลแคลอรี่',
-                    'actions' => array(
+    'type' => 'carousel',
+    'columns' => array(
+      array(
+        'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%82%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A2%E0%B8%B2%E0%B8%99.jpg?alt=media&token=ee0253c8-63e1-42db-a871-88370983760b',
+        'title' => 'ขี่จักรยาน ด้วยความเร็ว 14.4กม./ชม.',
+        'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 415 กิโลแคลอรี่',
+        'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
-                      
-                      )
-                    )
-                  ,array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A2%E0%B8%B2%E0%B8%B0%E0%B9%86.jpg?alt=media&token=b5ae33eb-3d6d-4502-859a-c3002a38f4d0',
-                    'title' => 'วิ่งเหยาะๆ',
-                    'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 600-750 กิโลแคลอรี่',
-                    'actions' => array(
+          array(
+            'type' => 'postback',
+            'label' => 'ข้อมูลเพิ่มเติม',
+            'data' => 'ข้อมูลเพิ่มเติม',
+            'text' => 'ข้อมูลเพิ่มเติม')
+          
+          )
+        )
+      ,array(
+        'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A2%E0%B8%B2%E0%B8%B0%E0%B9%86.jpg?alt=media&token=b5ae33eb-3d6d-4502-859a-c3002a38f4d0',
+        'title' => 'วิ่งเหยาะๆ',
+        'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 600-750 กิโลแคลอรี่',
+        'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
+          array(
+            'type' => 'postback',
+            'label' => 'ข้อมูลเพิ่มเติม',
+            'data' => 'ข้อมูลเพิ่มเติม',
+            'text' => 'ข้อมูลเพิ่มเติม')
 
-                      )
-                    )
-                  ,array(
-                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AE%E0%B8%B9%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AE%E0%B8%B9%E0%B8%9B.jpg?alt=media&token=42c59d18-1303-4bc7-a551-6746b6470ebb',
-                    'title' => 'เล่นฮูล่าฮูป',
-                    'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 430 กิโลแคลอรี่',
-                    'actions' => array(
+          )
+        )
+      ,array(
+        'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AE%E0%B8%B9%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AE%E0%B8%B9%E0%B8%9B.jpg?alt=media&token=42c59d18-1303-4bc7-a551-6746b6470ebb',
+        'title' => 'เล่นฮูล่าฮูป',
+        'text' => ' เป็นเวลา 1 ชั่วโมง เผาผลาญได้ 430 กิโลแคลอรี่',
+        'actions' => array(
 
-                      array(
-                        'type' => 'postback',
-                        'label' => 'ข้อมูลเพิ่มเติม',
-                        'data' => 'ข้อมูลเพิ่มเติม',
-                        'text' => 'ข้อมูลเพิ่มเติม')
+          array(
+            'type' => 'postback',
+            'label' => 'ข้อมูลเพิ่มเติม',
+            'data' => 'ข้อมูลเพิ่มเติม',
+            'text' => 'ข้อมูลเพิ่มเติม')
 
-                      )
-                    )
-                  )
-                )
-              ];
+          )
+        )
+      )
+    )
+  ];
 
 
             // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  )
-                );
-              
-            }
+  $client->replyMessage(
+    array(
+      'replyToken' => $event['replyToken'],
+      'messages' => [$messagess]
+      )
+    );
+  
+}
 
-            /*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
 
 
             //กายภาพบำบัดสำหรับผู้ใช้ที่ป่วย
-            else if($text == ""){
-             
-            }
-            
+else if($text == "ฉันป่วย อยากออกกำลังกายเบา"){
+ $messages = [
+ 'type' => 'text',
+ 'text' => 'ด้วยความยินดี'
+ ];
+}
+
             //อยากได้กล้าม
-            else if($text == ""){
-             
-            }
+else if($text == "ฉันอยากได้กล้ามแขน"){
+ $messages = [
+ 'type' => 'text',
+ 'text' => 'ด้วยความยินดี'
+ ];
+}
 
-            /*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
 
-            
+
+else if($text == "ขอบคุณ"){
+  $messages = [
+  'type' => 'text',
+  'text' => 'ด้วยความยินดี'
+  ];
+}
+
 
             //******  other  *******
-            else {
-                // Build message to reply back
-              $messages = [
-              'type' => 'text',
-              'text' => 'ขอโทษ ฉัันไม่เข้าใจ'
-              ];
-            }
+else {
+  $messages = [
+  'type' => 'text',
+  'text' => 'ขอโทษ ฉัันไม่เข้าใจ'
+  ];
+}
 
-            /*-------------------------------------------  Make a POST  -----------------------------------------*/
+/*-------------------------------------------  Make a POST  -----------------------------------------*/
 
             // Make a POST Request to Messaging API to reply to sender
-            $url = 'https://api.line.me/v2/bot/message/reply';
-            $data = [
-            'replyToken' => $replyToken,
-            'messages' => [$messages],
-            ];
-            $post = json_encode($data);
-            $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+$url = 'https://api.line.me/v2/bot/message/reply';
+$data = [
+'replyToken' => $replyToken,
+'messages' => [$messages],
+];
+$post = json_encode($data);
+$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $result = curl_exec($ch);
-            curl_close($ch);
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+$result = curl_exec($ch);
+curl_close($ch);
 
-            echo $result . "\r\n";
-
-            
-          }
-        }
-      }
+echo $result . "\r\n";
 
 
-      echo "OK";
+}
+}
+}
+
+
+echo "OK";
 
 
 //  https://warm-brushlands-72856.herokuapp.com/bot.php     ** for test link web
-      ?>
+?>
