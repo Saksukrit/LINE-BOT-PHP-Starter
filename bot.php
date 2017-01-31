@@ -776,12 +776,73 @@ else if($text == "ฉันป่วย อยากออกกำลังก�
  ];
 }
 
+
+/*--------------------------*/
+
             //อยากได้กล้าม
 else if($text == "ฉันอยากได้กล้ามแขน"){
- $messages = [
- 'type' => 'text',
- 'text' => 'ด้วยความยินดี'
+ 
+ $messagess = [
+ 'type' => 'template',
+ 'altText' => 'วิธีออกกำลังกายกล้ามแขน',
+ 'template' => array(
+
+  'type' => 'carousel',
+  'columns' => array(
+    array(
+      'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2FBarbell%20Curls.png?alt=media&token=69b326c9-412a-44b7-87f4-c6672dca5bb1',
+      'title' => 'Barbell Curls',
+      'text' => ' ท่าบริหารหน้าแขน หรือ ต้นแขน (Biceps) ',
+      'actions' => array(
+
+        array(
+          'type' => 'postback',
+          'label' => 'ข้อมูลเพิ่มเติม',
+          'data' => 'ข้อมูลเพิ่มเติม',
+          'text' => 'ข้อมูลเพิ่มเติม')
+        
+        )
+      )
+    ,array(
+      'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2FDips.jpg?alt=media&token=fb54b58b-4c62-4c4a-bdcd-58e55a9c95e0',
+      'title' => 'Dips',
+      'text' => ' ท่าบริหารหลังแขนหรือท้องแขน (Triceps) ',
+      'actions' => array(
+
+        array(
+          'type' => 'postback',
+          'label' => 'ข้อมูลเพิ่มเติม',
+          'data' => 'ข้อมูลเพิ่มเติม',
+          'text' => 'ข้อมูลเพิ่มเติม')
+
+        )
+      )
+    ,array(
+      'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2FFinger%20Curls.jpg?alt=media&token=b44f97fa-2689-4f9c-989c-8ce9fa9c602c',
+      'title' => 'Finger Curls',
+      'text' => ' ท่าบริหารปลายแขนหรือท่อนแขน (Forearm)',
+      'actions' => array(
+
+        array(
+          'type' => 'postback',
+          'label' => 'ข้อมูลเพิ่มเติม',
+          'data' => 'ข้อมูลเพิ่มเติม',
+          'text' => 'ข้อมูลเพิ่มเติม')
+
+        )
+      )
+    )
+  )
  ];
+
+
+            // LINEBotTiny
+ $client->replyMessage(
+  array(
+    'replyToken' => $event['replyToken'],
+    'messages' => [$messagess]
+    )
+  );
 }
 
 /*------------------------------------------------------------------------------------------------*/
