@@ -62,6 +62,16 @@ if (!is_null($events['events'])) {
 
             }
 
+            //เรียก bot
+            else if($text == "bot"){
+
+              $messages = [
+              'type' => 'text',
+              'text' => 'ฉันพร้อมแล้ว ถามอะไรดี'];
+
+            }
+
+
             // ข้อมูลผู้ใช้
             else if($text == "ข้อมูลอะไรบ้าง"){
 
@@ -338,12 +348,87 @@ if (!is_null($events['events'])) {
             /*------------------------------------------------------------------------------------------------*/
 
 
-            //มื้ออาหาร
+            //มื้ออาหาร เช้า
             else if($text == "ต้องการบันทึกอาหารมื้อเช้า"){
               $messages = [
               'type' => 'text',
               'text' => 'ได้เลย มื้อเช้าคุณทานอะไร ?'];
             }
+
+
+            else if($text == "ข้าวขาหมู 1 จาน"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
+              
+              อย่างอื่นเพิ่มมั้ย ?'];
+            }
+
+            else if($text == "กล้วยน้ำว้า 1 ผล"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
+              
+              อย่างอื่นเพิ่มมั้ย ?'];
+            }
+
+            
+            else if($text == "ไม่ล่ะ"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'โอเค สรุปรายการมื้อเช้า ของวันที่ 1/2/2560
+              รายการ
+              ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
+              กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
+              พลังงานรวม 750 กิโลแคลอรี่'];
+
+              $messagess = [
+              "type"=> "template",
+              "altText"=> "สรุปรายการมื้อเช้า",
+              "template"=> array(
+                "type"=> "confirm",
+                "text"=> "โอเค สรุปรายการมื้อเช้า ของวันที่ 1/2/2560
+              รายการ
+              ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
+              กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
+              พลังงานรวม 750 กิโลแคลอรี่
+              
+              ต้องการบันทึก หรือแก้ไข",
+                "actions"=> array(
+                  array(
+                    "type"=> "message",
+                    "label"=> "บันทึก",
+                    "text"=> "บันทึก"
+                    ),
+                  array(
+                    "type"=> "message",
+                    "label"=> "แก้ไข",
+                    "text"=> "แก้ไข"
+                    )
+                  )
+                )
+              ];
+
+
+                // LINEBotTiny
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
+
+
+
+            }
+
+            //บันทึก
+            else if($text == "บันทึก"){
+              $messages = [
+              'type' => 'text',
+              'text' => 'บันทึกข้อมูลเรียบร้อย ^^'];
+            }
+
 
 
 
@@ -358,7 +443,7 @@ if (!is_null($events['events'])) {
               แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่",
               "template"=> array(
                 "type"=> "confirm",
-                "text"=> "แคลอรี่ของคุณเกินกำหนดแล้ว
+                "text"=> "แคลอรี่ของคุณเกินกำหนด(TDEE)แล้ว
                 แคลอรี่ที่ได้รับตอนนี้เท่ากับ 2450 กิโลแคลอรี่
                 คุณต้องการคำแนะนำเกี่ยวกับอาหารสุขภาพ หรือวิธีการออกกำลังกายมั้ย ?",
                 "actions"=> array(
@@ -597,22 +682,7 @@ if (!is_null($events['events'])) {
 
             /*------------------------------------------------------------------------------------------------*/
 
-
             
-            else if($text == "img"){
-              $messagess = [
-              'type' => 'image',
-              'originalContentUrl'=> 'https://new.forest.go.th/it/wp-content/uploads/sites/21/2015/06/Tulips-1024x768.jpg',
-              'previewImageUrl'=> 'https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg'
-              ];
-
-                // LINEBotTiny
-              $client->replyMessage(
-                array(
-                  'replyToken' => $event['replyToken'],
-                  'messages' => [$messagess]
-                  ));
-            }
 
             //******  other  *******
             else {
@@ -622,6 +692,8 @@ if (!is_null($events['events'])) {
               'text' => 'ขอโทษ ฉัันไม่เข้าใจ'
               ];
             }
+
+            /*-------------------------------------------  Make a POST  -----------------------------------------*/
 
             // Make a POST Request to Messaging API to reply to sender
             $url = 'https://api.line.me/v2/bot/message/reply';
