@@ -344,6 +344,108 @@ if (!is_null($events['events'])) {
               'text' => 'โอเค '];
             }
 
+            /*------------------------------------------------------------------------------------------------*/
+
+
+            //ถามจากแคลอรี่
+            else if($text == "อยากรู้ อาหารหลัก ที่แคลอรี่ไม่เกิน 500 กิโลแคลอรี่"){
+
+              $messages = [
+              'type' => 'text',
+              'text' => 'โอเค '];
+
+              $messagess = [
+              'type' => 'template',
+              'altText' => 'อาหารหลักให้แคลอรี่ไม่เกิน 500 กิโลแคลอรี่',
+              'template' => array(
+
+                'type' => 'carousel',
+                'columns' => array(
+                  array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%8B%E0%B8%B8%E0%B8%9B%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%9E%E0%B8%94.jpg?alt=media&token=69640031-c7b9-4c2d-9771-441d9da2b04e',
+                    'title' => 'ซุปข้าวโพด 1 ถ้วย',
+                    'text' => ' 140 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+                      
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%9C%E0%B8%B7%E0%B8%AD%E0%B8%81.jpg?alt=media&token=5a9cbf6f-e9e7-4b4b-82df-e6d4a119c178',
+                    'title' => 'ข้าวอบเผือก 1 จาน',
+                    'text' => ' 385 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%A5%E0%B8%8A%E0%B8%B5%E0%B8%AA%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png?alt=media&token=98ec449a-b247-473b-b426-aeffe0e4323f',
+                    'title' => 'ดับเบิ้ลชีสเบอร์เกอร์ 1 ชิ้น',
+                    'text' => ' 350 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%9B%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B8%B5%E0%B9%8A%E0%B8%A2%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%94.png?alt=media&token=a2af6789-8d49-4aa4-9ed7-5f35d27514e4',
+                    'title' => 'ปอเปี๊ยะทอด 2 ชิ้น',
+                    'text' => ' 315 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+
+                      )
+                    )
+                  ,array(
+                    'thumbnailImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/my1st-firebase.appspot.com/o/photos%2Ffood%2F%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7%E0%B8%9C%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9E%E0%B8%A3%E0%B8%B2%E0%B9%84%E0%B8%81%E0%B9%88.jpg?alt=media&token=9105d478-a879-4e78-a17c-93643c6542de',
+                    'title' => 'ก๋วยเตี๋ยวผัดกระเพราไก่ 1 จาน',
+                    'text' => ' 440 กิโลแคลอรี่',
+                    'actions' => array(
+
+                      array(
+                        'type' => 'postback',
+                        'label' => 'ข้อมูลเพิ่มเติม',
+                        'data' => 'ข้อมูลเพิ่มเติม',
+                        'text' => 'ข้อมูลเพิ่มเติม')
+
+                      )
+                    )
+                  )
+                )
+              ];
+
+
+            // LINEBotTiny
+              $client->replyMessage(
+                array(
+                  'replyToken' => $event['replyToken'],
+                  'messages' => [$messagess]
+                  )
+                );
+
+            }
+
 
             /*------------------------------------------------------------------------------------------------*/
 
@@ -388,12 +490,12 @@ if (!is_null($events['events'])) {
               "template"=> array(
                 "type"=> "confirm",
                 "text"=> "โอเค สรุปรายการมื้อเช้า ของวันที่ 1/2/2560
-              รายการ
-              ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
-              กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
-              พลังงานรวม 750 กิโลแคลอรี่
-              
-              ต้องการบันทึก หรือแก้ไข",
+                รายการ
+                ข้าวขาหมู 1 จาน เท่ากับ 690 กิโลแคลอรี่
+                กล้วยน้ำว้า 1 ผล เท่ากับ	60 กิโลแคลอรี่
+                พลังงานรวม 750 กิโลแคลอรี่
+                
+                ต้องการบันทึก หรือแก้ไข",
                 "actions"=> array(
                   array(
                     "type"=> "message",
