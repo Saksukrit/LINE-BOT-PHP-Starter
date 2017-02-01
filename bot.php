@@ -790,6 +790,15 @@ if (!is_null($events['events'])) {
                 'text' => 'ด้วยความยินดี'
                 ];
             }
+
+
+            //bye bot
+            else if($text == "bye bot"){
+                $messages = [
+                'type' => 'text',
+                'text' => 'ยินดีให้คำปรึกษา, bye Saksukrit'
+                ];
+            }
             
             
             //******  other  *******
