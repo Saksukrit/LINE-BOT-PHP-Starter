@@ -116,7 +116,7 @@ if (!is_null($events['events'])) {
                 
                 'type' => 'buttons',
                 'title' => 'โอเค กรุณาเลือกมื้ออาหาร',
-                'text' => 'ให้พลังงานเท่ากับ 585 กิโลแคลอรี่',
+                'text' => ' ',
                 'actions' => array(
                 
                 array(
