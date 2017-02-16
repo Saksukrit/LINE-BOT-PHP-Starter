@@ -5,9 +5,10 @@ echo "okok pass";
 $link = mysql_connect('sql6.freemysqlhosting.net', 'sql6159246', 'DBUUiG4F5U');
 if (!$link) {
     die('Could not connect: ' . mysql_error());
-}
+}else{
 echo 'Connected successfully';
 mysql_close($link);
+}
 
 
 echo "okok";
