@@ -41,15 +41,13 @@ foreach ($client->parseEvents() as $event) {
                 default:
                     error_log("Unsupporeted message type: " . $message['type']);
                     break;
-        }
-        break;
-    default:
-        error_log("Unsupporeted event type: " . $event['type']);
-        break;
-}
+            }
+            break;
+        default:
+            error_log("Unsupporeted event type: " . $event['type']);
+            break;
+    }
 }
 
 
 echo "OK ?? ";
-
-?>
