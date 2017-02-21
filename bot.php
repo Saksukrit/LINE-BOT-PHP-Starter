@@ -833,12 +833,17 @@ else if($text == "ฉันอยากได้กล้ามแขน"){
   )
  ];
 
+ $messages = [
+ 'type' => 'text',
+ 'text' => 'ขอโทษ ฉัันไม่เข้าใจ'
+ ];
+
 
             // LINEBotTiny
  $client->replyMessage(
   array(
     'replyToken' => $event['replyToken'],
-    'messages' => [$messagess]
+    'messages' => [$messagess,$messages]
     )
   );
 }
@@ -868,7 +873,7 @@ else {
 $url = 'https://api.line.me/v2/bot/message/reply';
 $data = [
 'replyToken' => $replyToken,
-'messages' => [$messages,$messages]
+'messages' => [$messages,$messages]       // send one more
 ];
 $post = json_encode($data);
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
